@@ -4,11 +4,11 @@
 	verifica_sesion();
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Formulario de Ordenes en Linea</title>
+<meta name='viewport' content='width=device-width, inicial scale=1.0'>
 <link type="text/css" href="styles/start/jquery-ui-1.8.23.custom.css" rel="Stylesheet" />
 <script src="includes/jquery-1.8.0.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="includes/jquery-ui-1.8.23.custom.min.js"></script>
@@ -17,6 +17,7 @@
 <script src="includes/jquery.magnific-popup.js"></script> 
 <link href="includes/estilo.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="includes/magnific-popup.css"> 
+<link rel="stylesheet" type="text/css" href="includes/bootstrap/css/bootstrap.css">
 <script>
 $(document).ready(function () {	
 
@@ -703,15 +704,15 @@ label.error {
   <td align="center"><img src="images/LogoSO.png" width="349" height="198" /></td>
 </tr>
 <tr>
-  <td align="center"><h2 align="center" class="DDDD">FORMULARIO DE ORDENES DE TRABAJO</h2></td>
+  <td align="center"><h4 align="center"><strong>FORMULARIO DE ORDENES DE TRABAJO</strong></h4></td>
 </tr>
 </table>
 <table width="800" align="center" border="0">
 <tr>
-  <td align="center"><input name="button_search" type="button" class="" id="button_add" value="AGREGAR" />
-  				<input name="button_buscar" type="button" class="" id="button_buscar" value="CONSULTAR" />
-  				<input name="button_back" type="button" class="" id="button_back" value="MENU PRINCIPAL" />
-  				<input name="button_logout" type="button" class="" id="button_logout" value="SALIR" /></td>  
+  <td align="center"><input name="button_search" type="button" class="btn btn-primary" id="button_add" value="AGREGAR" />
+  				<input name="button_buscar" type="button" class="btn btn-primary" id="button_buscar" value="CONSULTAR" />
+  				<input name="button_back" type="button" class="btn btn-primary" id="button_back" value="MENU PRINCIPAL" />
+  				<input name="button_logout" type="button" class="btn btn-danger" id="button_logout" value="SALIR" /></td>  
 </tr>
 </table>
 <br />

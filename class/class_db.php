@@ -297,7 +297,7 @@
 			$stmt->execute();
 		
 			header("location: frm_pedidos.php?m=3");
-	}
+		}
 	
 		public function getCombiVariedad($sql=null)
 		{			
@@ -310,6 +310,20 @@
 			}
 			return $this->datos;			
 		}
+
+		public function getOpciones($tabla=null,$idTabla=null,$descripcion=null)
+		{
+			echo "<option value='SV' selected>Seleccione...</option>";
+			self::setDatos();
+			$sql = "SELECT $idTabla, $descripcion FROM $tabla";			
+    		$stm = $this->pdo->prepare($sql);
+    		$stm->execute();
+
+    		while($row=$stm->fetch(PDO::FETCH_ASSOC)){
+        		echo '<option value="'.$row['codigocliente'].'">'.$row['nombretrabajo'].'</option>';//print_r($row); 
+    		}
+		}
+
 	}
 		
 ?>

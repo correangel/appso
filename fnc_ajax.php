@@ -107,7 +107,9 @@ switch($op){
 	break;
 	
 	case "reload_servicio":					
-			$array[0] = $servicios;									
+			
+			$array[0] = $servicios;
+
 			echo json_encode($array);			
 	break;
 }

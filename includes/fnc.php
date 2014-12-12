@@ -8,7 +8,7 @@ function verifica_sesion()
 		redireccionar("login.php");		
 	}
 }
-//import_request_variables("GPC");
+import_request_variables("GPC");
 //error_reporting(E_ERROR);
 
 $fecha=date("Y-m-d",mktime(date("H")-1,date("i"),date("s"),date("m"),date("d"),date("Y")));
@@ -26,7 +26,7 @@ $bgf1="#ECF2F9";
 $bgf2="#FFFFFF";
 //**FIN DE COLORES DE DETALLE*****
 
-foreach($_POST as $nombre_campo => $valor){ 
+/*foreach($_POST as $nombre_campo => $valor){ 
    $asignacion = "\$" . $nombre_campo . "='" . $valor . "';"; 
    eval($asignacion); 
 }
@@ -34,7 +34,7 @@ foreach($_POST as $nombre_campo => $valor){
 foreach($_GET as $nombre_campo => $valor){ 
    $asignacion = "\$" . $nombre_campo . "='" . $valor . "';"; 
    eval($asignacion); 
-}
+}*/
 
 function registro($res){
   return mysql_fetch_array($res);
@@ -299,10 +299,11 @@ function llenar_combo($tabla,$where='',$orden='',$campo_valor='',$campo_descrip=
   $orden         = campos a ordenar, separados por coma Ej: codigo asc, nombre desc
   $campo_valor   = nombre del campo a colocar como valor de la opci�n
   $campo_descrip = nombre del campo a colocar como descripci�n de la opci�n
-  $seleccionar   = Valor que se compara con el registro, si coincide el valor se marca la opci�n como seleccionada por defecto
+  $seleccionar   = Valor que se compara con el registro, si coincide el valor se marca la opci�n
+  como seleccionada por defecto
   $codificar     = Si se env�a true, codifica el valor de la opci�n
   */
- 
+  
   if($orden){
     $orden = "order by $orden";
   }

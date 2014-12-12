@@ -66,698 +66,437 @@ label.error {
 	<div class='container' style="display:none" id="ingreso">
 		<form id="form1" name="form1" method="post" action="mnt_ordenes.php" >
 		
-		<div class="container row">
-			<article class="col-md-3">
-				<label for='id_optica'>Nombre de la Optica:</label>
-			</article>
-			<article class="col-md-5">
-				<?=$info[id_lote];?><select name="id_optica" id="id_optica" class="textbox form-control input-sm" >
-									    <option value="01">Valor 01</option>
-									    <option value="02">Valor 02</option>
-									    <option value="03">Valor 03</option>
-		        		            </select>
-			</article>
-		</div>
-
-		<div class="container" align="center">	
-			<h4><strong>DATOS DE LA RECETA</strong></h4>
-		</div>
-
-		<div class="container row">
-			<article class="col-md-2">
-				<label for='txt_control'>No. de Control</label>
-			</article>
-			<article class="col-md-6">
-				<label for='txt_paciente'>Nombre</label>
-			</article>
-		</div>
-
-		<div class="container row spaceField">
-			<article class="col-md-2">
-				<input name="txt_control" type="text" class="required form-control input-sm" id="txt_control" value="" size="15" />
-			</article>
-			<article class="col-md-6">
-				<input name="txt_paciente" type="text" class="required form-control input-sm" id="txt_paciente" value="" size="75" />
-			</article>
-		</div>
-
-		<div class="container row" align="center">
-			<article class="col-md-1">
-				<label for="ojo">OJO</label> 
-			</article>
-			<article class="col-md-1">
-				<label for="esfera">ESFERA</label>
-			</article>
-			<article class="col-md-1">
-				<label for="cilindro">CILINDRO</label>
-			</article>
-			<article class="col-md-1">
-				<label for="eje">EJE</label>
-			</article>
-			<article class="col-md-1">
-				<label for="prisma">PRISMA</label>
-			</article>
-			<article class="col-md-1">
-				<label for="adicion">ADICION</label>
-			</article>
-			<article class="col-md-1">
-				<label for="altura">ALTURA</label>
-			</article>
-			<article class="col-md-1">
-				<label for="dnp">DNP</label>
-			</article>
-			<article class="col-md-1">
-				<p>&nbsp;</p>
-			</article>
-			<article class="col-md-2">
-				<label for="distancia">DISTANCIA</p>
-			</article>
-		</div>
-
-		<div class="container row" align="center">
-			<article class="col-md-1">
-				<label for="ojod">O.D</label>
-			</article>
-			<article class="col-md-1">
-				<input name="txt_esferad" type="text" class="required form-control input-sm" id="txt_esferad" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_cilindrod" type="text" class="required form-control input-sm" id="txt_cilindrod" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_ejed" type="text" class="required form-control input-sm" id="txt_ejed" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_prismad" type="text" class="required form-control input-sm" id="txt_prismad" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_adiciond" type="text" class="required form-control input-sm" id="txt_adiciond" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_alturad" type="text" class="required form-control input-sm" id="txt_alturad" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_dnpd" type="text" class="required form-control input-sm" id="txt_dnpd" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<input name="buttoni" type="button" class="btn btn-info" id="buttoni" value="Info" />
-			</article>
-			<article class="col-md-2">
-				<label for="inter">INTER PUPILAR</label>
-			</article>			
-		</div>
-
-		<div class="container row spaceField" align="center">
-			<article class="col-md-1">
-				<label for="ojoi">O.I</label>
-			</article>
-			<article class="col-md-1">
-				<input name="txt_esferai" type="text" class="required form-control input-sm" id="txt_esferad" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_cilindroi" type="text" class="required form-control input-sm" id="txt_cilindrod" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_ejei" type="text" class="required form-control input-sm" id="txt_ejed" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_prismai" type="text" class="required form-control input-sm" id="txt_prismad" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_adicioni" type="text" class="required form-control input-sm" id="txt_adiciond" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_alturai" type="text" class="required form-control input-sm" id="txt_alturad" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_dnpi" type="text" class="required form-control input-sm" id="txt_dnpd" value="" size="15" />
-			</article>
-			<article class="col-md-1">
-				<p>&nbsp;</p>
-			</article>
-			<article class="col-md-2">
-				<input name="txt_distancia" type="text" class="required form-control input-sm" id="txt_distancia" value="" size="15" />
-			</article>			
-		</div>
-
-		<div class="container row spaceField" align="center">
-			<article class="col-md-3">
-				<label for="txt_variedad">VARIEDAD DE LENTE</label>
-			</article>
-			<article class="col-md-6">
-				<textarea name="txt_variedad" rows="2" cols="74" class="textbox form-control" id="txt_variedad" type="text" ></textarea>
-			</article>
-			<article class="col-md-2">
-				<input name="buttonv" type="button" class="btn btn-primary" id="buttonv" value="Seleccionar" />
-			</article>	
-		</div>
-
-		<div class="container" style="display:none" id="informacion">
-
-			<div class="container row" align="center">
-				<h3><small>POR FAVOR SELECCIONE SU CONFIGURACION</small></h3>
-			</div>
-
 			<div class="container row">
-				<article class="col-md-3 col-md-offset-1">
-					<label for="tipo">TIPO</label>
-				</article>
 				<article class="col-md-3">
-					<label for="material">MATERIAL</label>
+					<label for='id_optica'>Nombre de la Optica:</label>
 				</article>
-				<article class="col-md-3">
-					<label for="color">COLOR</label>
+				<article class="col-md-5">
+
+					<?=$info[id_lote];?><select name="id_optica" id="id_optica" class="textbox form-control input-sm" >
+					                        <?php $db = new Database();
+												$db->getOpciones('cliente','codigocliente','nombretrabajo');
+											?>										    
+			        		            </select>
 				</article>
 			</div>
 
-			<div class="container row">
-				<article class="col-md-3 col-md-offset-1">
-					<input name="op_tipo" type="radio" class="required " id="op_tipo" value="Convencional" /> Convencional
+			<div class="container" align="center">	
+				<h4><strong>DATOS DE LA RECETA</strong></h4>
+			</div>
+
+			<div class="container row" align="left">
+				<article class="col-md-2">
+					<label for='txt_control'>No. de Control</label>
 				</article>
-				<article class="col-md-3">
-					<input name="op_material" type="radio" class="required " id="op_material" value="policarbonato" /> Policarbonato
-				</article>
-				<article class="col-md-3">
-					<input name="op_color" type="radio" class="required " id="op_color" value="blanco" /> Blanco
+				<article class="col-md-6">
+					<label for='txt_paciente'>Nombre</label>
 				</article>
 			</div>
 
-			<div class="container row">
-				<article class="col-md-3 col-md-offset-1">
-					<input name="op_tipo" type="radio" class="required" id="op_tipo2" value="Basic Vision" /> Basic Vision
+			<div class="container row spaceField align="center" ">
+				<article class="col-md-2">
+					<input name="txt_control" type="text" class="required form-control input-sm" id="txt_control" value="" size="15" />
 				</article>
-				<article class="col-md-3">
-					<input name="op_material" type="radio" class="required" id="op_material2" value="plastico" /> Plástico
-				</article>
-				<article class="col-md-3">
-					<input name="op_color" type="radio" class="required" id="op_color2" value="otro" /> Otro
-				</article>
-			</div>
-
-			<div class="container row">
-				<article class="col-md-3 col-md-offset-1">
-					<input name="op_tipo" type="radio" class="required" id="op_tipo3" value="Perfect Vision" /> Perfect Vision
-				</article>
-				<article class="col-md-3">
-					<td width="300" align="left"><input name="op_tipo" type="radio" class="required" id="op_tipo4" value="Precise Form" /> Precise Form				
+				<article class="col-md-6">
+					<input name="txt_paciente" type="text" class="required form-control input-sm" id="txt_paciente" value="" size="75" />
 				</article>
 			</div>
 
 			<div class="container row" align="center">
-				<article class="col-md-3 col-md-offset-1">
-					<input name="txt_familia" class="form-control input-sm" type="text" id="txt_familia" value="Convencional" />
+				<article class="col-md-1">
+					<label for="ojo">OJO</label> 
 				</article>
-				<article class="col-md-3">
-					<input name="txt_material" class="form-control input-sm" type="text" id="txt_material" value="Policarbonato" />
+				<article class="col-md-1">
+					<label for="esfera">ESFERA</label>
 				</article>
-				<article class="col-md-3">
-					<input name="txt_color" class="form-control input-sm" type="text" id="txt_color" value="Blanco" />
+				<article class="col-md-1">
+					<label for="cilindro">CILINDRO</label>
+				</article>
+				<article class="col-md-1">
+					<label for="eje">EJE</label>
+				</article>
+				<article class="col-md-1">
+					<label for="prisma">PRISMA</label>
+				</article>
+				<article class="col-md-1">
+					<label for="adicion">ADICION</label>
+				</article>
+				<article class="col-md-1">
+					<label for="altura">ALTURA</label>
+				</article>
+				<article class="col-md-1">
+					<label for="dnp">DNP</label>
+				</article>
+				<article class="col-md-1">
+					<p>&nbsp;</p>
+				</article>
+				<article class="col-md-2">
+					<label for="distancia">DISTANCIA</p>
 				</article>
 			</div>
 
 			<div class="container row" align="center">
-				<h3><small>POR FAVOR SELECCIONE OPCION</small></h3>
+				<article class="col-md-1">
+					<label for="ojod">O.D</label>
+				</article>
+				<article class="col-md-1" align="center">
+					<input name="txt_esferad" type="text" class="required form-control input-sm" id="txt_esferad" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_cilindrod" type="text" class="required form-control input-sm" id="txt_cilindrod" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_ejed" type="text" class="required form-control input-sm" id="txt_ejed" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_prismad" type="text" class="required form-control input-sm" id="txt_prismad" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_adiciond" type="text" class="required form-control input-sm" id="txt_adiciond" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_alturad" type="text" class="required form-control input-sm" id="txt_alturad" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_dnpd" type="text" class="required form-control input-sm" id="txt_dnpd" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<input name="buttoni" type="button" class="btn btn-info" id="buttoni" value="Info" />
+				</article>
+				<article class="col-md-2">
+					<label for="inter">INTER PUPILAR</label>
+				</article>			
 			</div>
 
-			<div class="container row" align="left">
-				<article class="col-md-6 ">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var1" value="" /> 
-					<input name="txt_var1" type="text" class="required" id="txt_var1" value="" size="50" />
+			<div class="container row spaceField" align="center">
+				<article class="col-md-1">
+					<label for="ojoi">O.I</label>
+				</article>
+				<article class="col-md-1">
+					<input name="txt_esferai" type="text" class="required form-control input-sm" id="txt_esferai" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_cilindroi" type="text" class="required form-control input-sm" id="txt_cilindroi" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_ejei" type="text" class="required form-control input-sm" id="txt_ejei" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_prismai" type="text" class="required form-control input-sm" id="txt_prismai" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_adicioni" type="text" class="required form-control input-sm" id="txt_adicioni" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_alturai" type="text" class="required form-control input-sm" id="txt_alturai" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_dnpi" type="text" class="required form-control input-sm" id="txt_dnpi" value="" size="15" />
+				</article>
+				<article class="col-md-1">
+					<p>&nbsp;</p>
+				</article>
+				<article class="col-md-2">
+					<input name="txt_distancia" type="text" class="required form-control input-sm" id="txt_distancia" value="" size="15" />
+				</article>			
+			</div>
+
+			<div class="container row spaceField" align="center">
+				<article class="col-md-3">
+					<label for="txt_variedad">VARIEDAD DE LENTE</label>
 				</article>
 				<article class="col-md-6">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var2" value="" /> 
-					<input name="txt_var2" type="text" class="required" id="txt_var2" value="" size="50" />
+					<textarea name="txt_variedad" rows="2" cols="74" class="textbox form-control" id="txt_variedad" type="text" ></textarea>
 				</article>
+				<article class="col-md-2">
+					<input name="buttonv" type="button" class="btn btn-primary" id="buttonv" value="Seleccionar" />
+				</article>	
 			</div>
 
-			<div class="container row" align="left">
-				<article class="col-md-6 ">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var3" value="" />  
-					<input name="txt_var3" type="text" class="required" id="txt_var3" value="" size="50" />
+			<div class="container" style="display:none" id="informacion">
+
+				<div class="container row" align="center">
+					<h3><small>POR FAVOR SELECCIONE SU CONFIGURACION</small></h3>
+				</div>
+
+				<div class="container row">
+					<article class="col-md-3 col-md-offset-1">
+						<label for="tipo">TIPO</label>
+					</article>
+					<article class="col-md-3">
+						<label for="material">MATERIAL</label>
+					</article>
+					<article class="col-md-3">
+						<label for="color">COLOR</label>
+					</article>
+				</div>
+
+				<div class="container row">
+					<article class="col-md-3 col-md-offset-1">
+						<input name="op_tipo" type="radio" class="required " id="op_tipo" value="Convencional" /> Convencional
+					</article>
+					<article class="col-md-3">
+						<input name="op_material" type="radio" class="required " id="op_material" value="policarbonato" /> Policarbonato
+					</article>
+					<article class="col-md-3">
+						<input name="op_color" type="radio" class="required " id="op_color" value="blanco" /> Blanco
+					</article>
+				</div>
+
+				<div class="container row">
+					<article class="col-md-3 col-md-offset-1">
+						<input name="op_tipo" type="radio" class="required" id="op_tipo2" value="Basic Vision" /> Basic Vision
+					</article>
+					<article class="col-md-3">
+						<input name="op_material" type="radio" class="required" id="op_material2" value="plastico" /> Plástico
+					</article>
+					<article class="col-md-3">
+						<input name="op_color" type="radio" class="required" id="op_color2" value="otro" /> Otro
+					</article>
+				</div>
+
+				<div class="container row">
+					<article class="col-md-3 col-md-offset-1">
+						<input name="op_tipo" type="radio" class="required" id="op_tipo3" value="Perfect Vision" /> Perfect Vision
+					</article>
+					<article class="col-md-3">
+						<td width="300" align="left"><input name="op_tipo" type="radio" class="required" id="op_tipo4" value="Precise Form" /> Precise Form				
+					</article>
+				</div>
+
+				<div class="container row" align="center">
+					<article class="col-md-3 col-md-offset-1">
+						<input name="txt_familia" class="form-control input-sm" type="text" id="txt_familia" value="Convencional" />
+					</article>
+					<article class="col-md-3">
+						<input name="txt_material" class="form-control input-sm" type="text" id="txt_material" value="Policarbonato" />
+					</article>
+					<article class="col-md-3">
+						<input name="txt_color" class="form-control input-sm" type="text" id="txt_color" value="Blanco" />
+					</article>
+				</div>
+
+				<div class="container row" align="center">
+					<h3><small>POR FAVOR SELECCIONE OPCION</small></h3>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var1" value="" /> 
+						<input name="txt_var1" type="text" class="required" id="txt_var1" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var2" value="" /> 
+						<input name="txt_var2" type="text" class="required" id="txt_var2" value="" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var3" value="" />  
+						<input name="txt_var3" type="text" class="required" id="txt_var3" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var4" value="" />  
+						<input name="txt_var4" type="text" class="required" id="txt_var4" value="" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var5" value="" />   
+						<input name="txt_var5" type="text" class="required" id="txt_var5" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var6" value="" />   
+						<input name="txt_var6" type="text" class="required" id="txt_var6" value="" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var7" value="" />    
+						<input name="txt_var7" type="text" class="required" id="txt_var7" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var8" value="" />    
+						<input name="txt_var8" type="text" class="required" id="txt_var8" value="" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var9" value="" />     
+						<input name="txt_var9" type="text" class="required" id="txt_var9" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var10" value="" />     
+						<input name="txt_var10" type="text" class="required" id="txt_var10" value="" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var11" value="" />      
+						<input name="txt_var11" type="text" class="required" id="txt_var11" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var12" value="" />      
+						<input name="txt_var12" type="text" class="required" id="txt_var12" value="" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var13" value="" />       
+						<input name="txt_var13" type="text" class="required" id="txt_var13" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var14" value="" />       
+						<input name="txt_var14" type="text" class="required" id="txt_var14" value="" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var15" value="" />        
+						<input name="txt_var15" type="text" class="required" id="txt_var15" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var16" value="" />        
+						<input name="txt_var16" type="text" class="required" id="txt_var16" value="" size="50" />
+					</article>
+				</div>
+
+			</div>		
+			
+			<div class="container row spaceField" align="center">
+				<article class="col-md-3">
+					<label for="colores">COLORES ESPECIALES</label>
 				</article>
 				<article class="col-md-6">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var4" value="" />  
-					<input name="txt_var4" type="text" class="required" id="txt_var4" value="" size="50" />
+					<textarea name="txt_colores" rows="2" cols="74" class="textbox form-control" id="txt_colores" type="text" ><?=$info[observacion];?></textarea>
 				</article>
-			</div>
+				<article class="col-md-2">
+					<td colspan="2"><input type="checkbox" name="txt_vision" id="txt_vision"><label for="topVision"> TOP VISION</label>
+				</article>	
+			</div> 
 
-			<div class="container row" align="left">
-				<article class="col-md-6 ">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var5" value="" />   
-					<input name="txt_var5" type="text" class="required" id="txt_var5" value="" size="50" />
-				</article>
+			<div class="container row spaceField" align="center">
 				<article class="col-md-6">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var6" value="" />   
-					<input name="txt_var6" type="text" class="required" id="txt_var6" value="" size="50" />
+					<label for="txt_montura">DATOS DE LA MONTURA</label>
+				</article>
+				<article class="col-md-1">
+					<label for="txt_horizontal">H</label>
+				</article>
+				<article class="col-md-1">
+					<label for="txt_patilla">P</label>
+				</article>
+				<article class="col-md-1">
+					<label for="txt_vertical">V</label>
+				</article>
+				<article class="col-md-1">
+					<label for="txt_diagonal">D</label>
+				</article>
+				<article class="col-md-1">
+					<p>&nbsp;</p> 
 				</article>
 			</div>
 
-			<div class="container row" align="left">
-				<article class="col-md-6 ">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var7" value="" />    
-					<input name="txt_var7" type="text" class="required" id="txt_var7" value="" size="50" />
-				</article>
+			<div class="container row spaceField" align="center">
 				<article class="col-md-6">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var8" value="" />    
-					<input name="txt_var8" type="text" class="required" id="txt_var8" value="" size="50" />
+					<input name="txt_montura" type="text" class="required form-control" id="txt_montura" value="" size="55" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_horizontal" type="text" class="required form-control" id="txt_horizontal" value="" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_patilla" type="text" class="required form-control" id="txt_patilla" value="" size="6" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_vertical" type="text" class="required form-control" id="txt_vertical" value="" size="6" />
+				</article>
+				<article class="col-md-1">
+					<input name="txt_diagonal" type="text" class="required form-control" id="txt_diagonal" value="" size="6" />
+				</article>
+				<article class="col-md-1">
+					<input name="buttoni2" type="button" class="btn btn-info" id="buttoni2" value="Info" /> 
 				</article>
 			</div>
 
-			<div class="container row" align="left">
-				<article class="col-md-6 ">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var9" value="" />     
-					<input name="txt_var9" type="text" class="required" id="txt_var9" value="" size="50" />
-				</article>
-				<article class="col-md-6">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var10" value="" />     
-					<input name="txt_var10" type="text" class="required" id="txt_var10" value="" size="50" />
+			<div class="container row spaceField" align="center">
+				<article class="col-md-8">
+					<label for="txt_adicionales">OBSERVACIONES O INDICACIONES ADICIONALES:</label>
 				</article>
 			</div>
 
-			<div class="container row" align="left">
-				<article class="col-md-6 ">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var11" value="" />      
-					<input name="txt_var11" type="text" class="required" id="txt_var11" value="" size="50" />
+			<div class="container row spaceField" align="center">
+				<article class="col-md-8">
+					<textarea name="txt_observacion" rows="2" cols="74" class="textbox form-control" id="txt_observacion" type="text" ></textarea>
 				</article>
-				<article class="col-md-6">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var12" value="" />      
-					<input name="txt_var12" type="text" class="required" id="txt_var12" value="" size="50" />
-				</article>
-			</div>
+				<article class="col-md-2">
+					<input name="buttons" type="button" class="btn btn-primary" id="buttons" value="Servicios" />
+				</article>			
+			</div>		
 
-			<div class="container row" align="left">
-				<article class="col-md-6 ">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var13" value="" />       
-					<input name="txt_var13" type="text" class="required" id="txt_var13" value="" size="50" />
-				</article>
-				<article class="col-md-6">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var14" value="" />       
-					<input name="txt_var14" type="text" class="required" id="txt_var14" value="" size="50" />
-				</article>
-			</div>
-
-			<div class="container row" align="left">
-				<article class="col-md-6 ">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var15" value="" />        
-					<input name="txt_var15" type="text" class="required" id="txt_var15" value="" size="50" />
-				</article>
-				<article class="col-md-6">
-					<input name="opcion_var" type="radio" class="required" id="opcion_var16" value="" />        
-					<input name="txt_var16" type="text" class="required" id="txt_var16" value="" size="50" />
-				</article>
-			</div>
-
-		</div>		
-		
-		<div class="container row spaceField" align="center">
-			<article class="col-md-3">
-				<label for="colores">COLORES ESPECIALES</label>
-			</article>
-			<article class="col-md-6">
-				<textarea name="txt_colores" rows="2" cols="74" class="textbox form-control" id="txt_colores" type="text" ><?=$info[observacion];?></textarea>
-			</article>
-			<article class="col-md-2">
-				<td colspan="2"><input type="checkbox" name="txt_vision" id="txt_vision"><label for="topVision"> TOP VISION</label>
-			</article>	
-		</div> 
-
-		<div class="container row spaceField" align="center">
-			<article class="col-md-6">
-				<label for="txt_montura">DATOS DE LA MONTURA</label>
-			</article>
-			<article class="col-md-1">
-				<label for="txt_horizontal">H</label>
-			</article>
-			<article class="col-md-1">
-				<label for="txt_patilla">P</label>
-			</article>
-			<article class="col-md-1">
-				<label for="txt_vertical">V</label>
-			</article>
-			<article class="col-md-1">
-				<label for="txt_diagonal">D</label>
-			</article>
-			<article class="col-md-1">
-				<p>&nbsp;</p> 
-			</article>
-		</div>
-
-		<div class="container row spaceField" align="center">
-			<article class="col-md-6">
-				<input name="txt_montura" type="text" class="required form-control" id="txt_montura" value="" size="55" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_horizontal" type="text" class="required form-control" id="txt_horizontal" value="" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_patilla" type="text" class="required form-control" id="txt_patilla" value="" size="6" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_vertical" type="text" class="required form-control" id="txt_vertical" value="" size="6" />
-			</article>
-			<article class="col-md-1">
-				<input name="txt_diagonal" type="text" class="required form-control" id="txt_diagonal" value="" size="6" />
-			</article>
-			<article class="col-md-1">
-				<input name="buttoni2" type="button" class="btn btn-info" id="buttoni2" value="Info" /> 
-			</article>
-		</div>
-
-		<div class="container row spaceField" align="center">
-			<article class="col-md-8">
-				<label for="txt_observacion">OBSERVACIONES O INDICACIONES ADICIONALES:</label>
-			</article>
-		</div>
-
-		<div class="container row spaceField" align="center">
-			<article class="col-md-8">
-				<textarea name="txt_observacion" rows="2" cols="74" class="textbox form-control" id="txt_observacion" type="text" ></textarea>
-			</article>
-			<article class="col-md-2">
-				<input name="buttons" type="button" class="btn btn-primary" id="buttons" value="Servicios" />
-			</article>			
-		</div>		
-
-		<div style="display:none" id="servicios">
-		<table width="300" align="center" border="0">
-		  <tr><td align="center">Agregar Servicios</td></tr>
-		  <tr>
-		  	<td><input type="checkbox" name="txt_servicio[]" id="txt_servicio" value=" APLICACION LAKA">APLICACION LAKA</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio2" value=" CAMBIO DE FORMA">CAMBIO DE FORMA</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio3" value=" DOS CARAS (BICONVEXO)">DOS CARAS</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio4" value=" ENDURECIDO">ENDURECIDO</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio5" value=" FACETADO">FACETADO</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio6" value=" GRAPAS">GRAPAS</td>
-		  <tr>
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio7" value=" MONTAJE">MONTAJE</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio8" value=" MONTAJE ARO DE SOL">MONTAJE ARO DE SOL</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio9" value=" MONTAJE OAKLEY">MONTAJE OAKLEY</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio10" value=" PERFORACIONES">PERFORACIONES</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio11" value=" PINTAR ARO">PINTAR ARO</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio12" value=" PLAQUETAS">PLAQUETAS</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio13" value=" RANURADO">RANURADO</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio14" value=" RLX">RLX</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio15" value=" SERVICIO PLUSS">SERVICIO PLUSS</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio16" value=" SERVICIO EXPRESS">SERVICIO EXPRESS</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio" id="txt_servicio17" value=" TINTE">TINTE</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio" id="txt_servicio18" value=" TOP VISION">TOP VISION</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio" id="txt_servicio19" value=" TORNILLO">TORNILLO</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio" id="txt_servicio20" value=" TUERCA">TUERCA</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio" id="txt_servicio21" value=" UV">UV</td>
-		  </tr>
-		  <tr>  
-		    <td align="center"><input name="buttono" type="button" class="" id="buttono" value="CERRAR" /></td>
-		  </tr>
-		</table>
-		</div>		
-		
-
-		<table align="center" width="900" border="0" cellspacing="0" cellpadding="0">
-		  <!--<tr>
-		    <td >Nombre de la Optica:</td>
-		    <td colspan="9"><?=$info[id_lote];?><select name="id_optica" id="id_optica" class="textbox" >
-		      <option value="01">Valor 01</option>
-		      <option value="02">Valor 02</option>
-		      <option value="03">Valor 03</option>
-		        
-		      </select></td>
-		  </tr>
-		  <tr>
-		    <td colspan="10" align="center" ></td>
-		  </tr>
-		  
-		  <tr>
-		  	<td>OJO</td>
-		    <td>ESFERA</td>
-		    <td>CILINDRO</td>
-		    <td>EJE</td>
-		    <td>PRISMA</td>
-		    <td>ADICION</td>
-		    <td>ALTURA</td>
-		    <td>DNP</td>
-		    <td>&nbsp;</td>
-		    <td>Distancia</td>
-		  </tr>
-		  <tr>
-		    <td>O.D.</td>
-		    <td><input name="txt_esferad" type="text" class="required" id="txt_esferad" value="" size="15" /></td>
-		    <td><input name="txt_cilindrod" type="text" class="required" id="txt_cilindrod" value="" size="15" /></td>
-		    <td><input name="txt_ejed" type="text" class="required" id="txt_ejed" value="" size="15" /></td>
-		    <td><input name="txt_prismad" type="text" class="required" id="txt_prismad" value="" size="15" /></td>
-		    <td><input name="txt_adiciond" type="text" class="required" id="txt_adiciond" value="" size="15" /></td>
-		    <td><input name="txt_alturad" type="text" class="required" id="txt_alturad" value="" size="15" /></td>
-		    <td><input name="txt_dnpd" type="text" class="required" id="txt_dnpd" value="" size="15" /></td>
-		    <td><input name="buttoni" type="button" class="" id="buttoni" value="Info" /></td>
-		    <td>Inter Pupilar</td>
-		  </tr>
-		  <tr>
-		    <td>O.I.</td>
-		    <td><input name="txt_esferai" type="text" class="required" id="txt_esferai" value="" size="15" /></td>
-		    <td><input name="txt_cilindroi" type="text" class="required" id="txt_cilindroi" value="" size="15" /></td>
-		    <td><input name="txt_ejei" type="text" class="required" id="txt_ejei" value="" size="15" /></td>
-		    <td><input name="txt_prismai" type="text" class="required" id="txt_prismai" value="" size="15" /></td>
-		    <td><input name="txt_adicioni" type="text" class="required" id="txt_adicioni" value="" size="15" /></td>
-		    <td><input name="txt_alturai" type="text" class="required" id="txt_alturai" value="" size="15" /></td>
-		    <td><input name="txt_dnpi" type="text" class="required" id="txt_dnpi" value="" size="15" /></td>
-		    <td></td>
-		    <td><input name="txt_distancia" type="text" class="required" id="txt_distancia" value="" size="15" /></td>
-		  </tr>
-		  
-		  <tr>
-		    <td colspan="2">VARIEDAD DE LENTE:</td>
-		    <td colspan="6"><textarea name="txt_variedad" rows="3" cols="74" class="textbox" id="txt_variedad" type="text" ></textarea></td>
-		    <td colspan="2" align="center"> <input name="buttonv" type="button" class="" id="buttonv" value="Seleccionar" /></td>    
-		  </tr>
-		</table>
-
-		<div style="display:none" id="informacion">
-		<table width="900" align="center" border="0">  
-		  <tr>
-		  	<td width="900"colspan="3" align="center">Seleccione Por Favor</td>  
-		  </tr>
-		  <tr>
-		  	<td width="300" align="center">Tipo</td>
-		    <td width="300" align="center">Material</td>
-		    <td width="300" align="center">Color</td>  
-		  </tr>
-		  <tr>
-		  	<td width="300" align="left"><input name="op_tipo" type="radio" class="required" id="op_tipo" value="Convencional" />
-		  	Convencional</td>
-		    <td width="300" align="left"><input name="op_material" type="radio" class="required" id="op_material" value="policarbonato" />
-		  	Policarbonato</td>
-		    <td width="300" align="left"><input name="op_color" type="radio" class="required" id="op_color" value="blanco" />
-		  	Blanco</td>  
-		  </tr>
-		   <tr>
-		  	<td width="300" align="left"><input name="op_tipo" type="radio" class="required" id="op_tipo2" value="Basic Vision" />
-		  	Basic Vision</td>
-		    <td width="300" align="left"><input name="op_material" type="radio" class="required" id="op_material2" value="plastico" />
-		  	Plástico</td>
-		    <td width="300" align="left"><input name="op_color" type="radio" class="required" id="op_color2" value="otro" />
-		  	Otro</td>  
-		  </tr>
-		  <tr>
-		  	<td width="300" align="left"><input name="op_tipo" type="radio" class="required" id="op_tipo3" value="Perfect Vision" />
-		  	Perfect Vision</td>    
-		  </tr>
-		  <tr>
-		  	<td width="300" align="left"><input name="op_tipo" type="radio" class="required" id="op_tipo4" value="Precise Form" />
-		  	Precise Form</td>    
-		  </tr>
-		 
-		  
-		  
-		  
-		</table>  
-
-		<table width="900" align="center" border="0">
-		 <tr>
-		  	<td align="center" colspan="4">Seleccione Opción</td>
-		  </tr>
-		  <tr>
-		  	<td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var1" value="" /></td>
-		    <td width="438"><input name="txt_var1" type="text" class="required" id="txt_var1" value="" size="75" /></td>
-		    <td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var2" value="" /></td>
-		    <td width="438"><input name="txt_var2" type="text" class="required" id="txt_var2" value="" size="75" /></td>
-		  </tr>  
-		  <tr>
-		  	<td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var3" value="" /></td>
-		    <td width="438"><input name="txt_var3" type="text" class="required" id="txt_var3" value="" size="75" /></td>
-		    <td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var4" value="" /></td>
-		    <td width="438"><input name="txt_var4" type="text" class="required" id="txt_var4" value="" size="75" /></td>
-		  </tr>
-		  
-		  <tr>
-		  	<td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var5" value="" /></td>
-		    <td width="438"><input name="txt_var5" type="text" class="required" id="txt_var5" value="" size="75" /></td>
-		    <td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var6" value="" /></td>
-		    <td width="438"><input name="txt_var6" type="text" class="required" id="txt_var6" value="" size="75" /></td>
-		  </tr>
-		  
-		  <tr>
-		  	<td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var7" value="" /></td>
-		    <td width="438"><input name="txt_var7" type="text" class="required" id="txt_var7" value="" size="75" /></td>
-		    <td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var8" value="" /></td>
-		    <td width="438"><input name="txt_var8" type="text" class="required" id="txt_var8" value="" size="75" /></td>
-		  </tr>
-		  
-		  <tr>
-		  	<td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var9" value="" /></td>
-		    <td width="438"><input name="txt_var9" type="text" class="required" id="txt_var9" value="" size="75" /></td>
-		    <td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var10" value="" /></td>
-		    <td width="438"><input name="txt_var10" type="text" class="required" id="txt_var10" value="" size="75" /></td>
-		  </tr>
-		  
-		  <tr>
-		  	<td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var11" value="" /></td>
-		    <td width="438"><input name="txt_var11" type="text" class="required" id="txt_var11" value="" size="75" /></td>
-		    <td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var12" value="" /></td>
-		    <td width="438"><input name="txt_var12" type="text" class="required" id="txt_var12" value="" size="75" /></td>
-		  </tr>
-		  <tr>
-		  	<td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var13" value="" /></td>
-		    <td width="438"><input name="txt_var13" type="text" class="required" id="txt_var13" value="" size="75" /></td>
-		    <td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var14" value="" /></td>
-		    <td width="438"><input name="txt_var14" type="text" class="required" id="txt_var14" value="" size="75" /></td>
-		  </tr>
-		  <tr>
-		  	<td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var15" value="" /></td>
-		    <td width="438"><input name="txt_var15" type="text" class="required" id="txt_var15" value="" size="75" /></td>
-		    <td width="12"><input name="opcion_var" type="radio" class="required" id="opcion_var16" value="" /></td>
-		    <td width="438"><input name="txt_var16" type="text" class="required" id="txt_var16" value="" size="75" /></td>
-		  </tr>
-		  
-		  
-		<input name="txt_familia" type="text" id="txt_familia" value="Convencional" />
-		<input name="txt_material" type="text" id="txt_material" value="Policarbonato" />
-		<input name="txt_color" type="text" id="txt_color" value="Blanco" /> 
-		  
-		</table>
-
-		</div>
-
-		<table align="center" width="900" border="0" cellspacing="0" cellpadding="0">
-		<tr>
-		  	<td width="100"> </td>
-		    <td width="100"> </td>
-		    <td width="100"> </td>
-		    <td width="100"> </td>
-		    <td width="100"> </td>
-		    <td width="100"> </td>
-		    <td width="100"> </td>
-		    <td width="100"> </td>
-		    <td width="100"> </td>
-		    <td width="100"> </td>
-		</tr> 
-
-
-
-		  <tr>
-		    <td colspan="2">COLORES ESPECIALES:</td>
-		    <td colspan="6"><textarea name="txt_colores" rows="2" cols="74" class="textbox" id="txt_colores" type="text" ><?=$info[observacion];?></textarea></td>
-		    <td colspan="2"><input type="checkbox" name="txt_vision" id="txt_vision"> 
-		    TOP VISION<br></td>    
-		  </tr>
-		  <tr>
-		  	<td colspan="5">DATOS DE LA MONTURA</td>
-		    <td>H</td>
-		    <td>P</td>
-		    <td>V</td>
-		    <td>D</td>
-		    <td>&nbsp;</td>    
-		  </tr>
-		   <tr>
-		  	<td colspan="5"><input name="txt_montura" type="text" class="required" id="txt_montura" value="" size="75" /></td>
-		    <td><input name="txt_horizontal" type="text" class="required" id="txt_horizontal" value="" size="6" /></td>
-		    <td><input name="txt_patilla" type="text" class="required" id="txt_patilla" value="" size="6" /></td>
-		    <td><input name="txt_vertical" type="text" class="required" id="txt_vertical" value="" size="6" /></td>
-		    <td><input name="txt_diagonal" type="text" class="required" id="txt_diagonal" value="" size="6" /></td>
-		    <td><input name="buttoni2" type="button" class="" id="buttoni2" value="Info" /></td>    
-		  </tr>
-		  <tr>
-		    <td colspan="2">OBSERVACIONES O INDICACIONES ADICIONALES:</td>
-		    <td colspan="6"><textarea name="txt_observacion" rows="3" cols="74" class="textbox" id="txt_observacion" type="text" ></textarea></td>
-		    <td colspan="2" align="center"><input name="buttons" type="button" class="" id="buttons" value="Servicios" /></td>    
-		  </tr>-->
-		</table>
-		<div style="display:none" id="serviciosold">
-		<table width="300" align="center" border="0">
-		  <tr><td align="center">Agregar Servicios</td></tr>
-		  <tr>
-		  	<td><input type="checkbox" name="txt_servicio[]" id="txt_servicio" value=" APLICACION LAKA">APLICACION LAKA</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio2" value=" CAMBIO DE FORMA">CAMBIO DE FORMA</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio3" value=" DOS CARAS (BICONVEXO)">DOS CARAS</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio4" value=" ENDURECIDO">ENDURECIDO</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio5" value=" FACETADO">FACETADO</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio6" value=" GRAPAS">GRAPAS</td>
-		  <tr>
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio7" value=" MONTAJE">MONTAJE</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio8" value=" MONTAJE ARO DE SOL">MONTAJE ARO DE SOL</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio9" value=" MONTAJE OAKLEY">MONTAJE OAKLEY</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio10" value=" PERFORACIONES">PERFORACIONES</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio11" value=" PINTAR ARO">PINTAR ARO</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio12" value=" PLAQUETAS">PLAQUETAS</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio13" value=" RANURADO">RANURADO</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio14" value=" RLX">RLX</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio15" value=" SERVICIO PLUSS">SERVICIO PLUSS</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio16" value=" SERVICIO EXPRESS">SERVICIO EXPRESS</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio" id="txt_servicio17" value=" TINTE">TINTE</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio" id="txt_servicio18" value=" TOP VISION">TOP VISION</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio" id="txt_servicio19" value=" TORNILLO">TORNILLO</td>
-		  </tr>  
-		    <td><input type="checkbox" name="txt_servicio" id="txt_servicio20" value=" TUERCA">TUERCA</td>
-		  <tr>  
-		    <td><input type="checkbox" name="txt_servicio" id="txt_servicio21" value=" UV">UV</td>
-		  </tr>
-		  <tr>  
-		    <td align="center"><input name="buttono" type="button" class="" id="buttono" value="CERRAR" /></td>
-		  </tr>
-		</table>
+			<div style="display:none" id="servicios">
+				<table width="300" align="center" border="0">
+				  <tr><td align="center">Agregar Servicios</td></tr>
+				  <tr>
+				  	<td><input type="checkbox" name="txt_servicio[]" id="txt_servicio" value=" APLICACION LAKA">APLICACION LAKA</td>
+				  </tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio2" value=" CAMBIO DE FORMA">CAMBIO DE FORMA</td>
+				  <tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio3" value=" DOS CARAS (BICONVEXO)">DOS CARAS</td>
+				  </tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio4" value=" ENDURECIDO">ENDURECIDO</td>
+				  <tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio5" value=" FACETADO">FACETADO</td>
+				  </tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio6" value=" GRAPAS">GRAPAS</td>
+				  <tr>
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio7" value=" MONTAJE">MONTAJE</td>
+				  </tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio8" value=" MONTAJE ARO DE SOL">MONTAJE ARO DE SOL</td>
+				  <tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio9" value=" MONTAJE OAKLEY">MONTAJE OAKLEY</td>
+				  </tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio10" value=" PERFORACIONES">PERFORACIONES</td>
+				  <tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio11" value=" PINTAR ARO">PINTAR ARO</td>
+				  </tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio12" value=" PLAQUETAS">PLAQUETAS</td>
+				  <tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio13" value=" RANURADO">RANURADO</td>
+				  </tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio14" value=" RLX">RLX</td>
+				  <tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio15" value=" SERVICIO PLUSS">SERVICIO PLUSS</td>
+				  </tr>  
+				    <td><input type="checkbox" name="txt_servicio[]" id="txt_servicio16" value=" SERVICIO EXPRESS">SERVICIO EXPRESS</td>
+				  <tr>  
+				    <td><input type="checkbox" name="txt_servicio" id="txt_servicio17" value=" TINTE">TINTE</td>
+				  </tr>  
+				    <td><input type="checkbox" name="txt_servicio" id="txt_servicio18" value=" TOP VISION">TOP VISION</td>
+				  <tr>  
+				    <td><input type="checkbox" name="txt_servicio" id="txt_servicio19" value=" TORNILLO">TORNILLO</td>
+				  </tr>  
+				    <td><input type="checkbox" name="txt_servicio" id="txt_servicio20" value=" TUERCA">TUERCA</td>
+				  <tr>  
+				    <td><input type="checkbox" name="txt_servicio" id="txt_servicio21" value=" UV">UV</td>
+				  </tr>
+				  <tr>  
+				    <td align="center"><input name="buttono" type="button" class="" id="buttono" value="CERRAR" /></td>
+				  </tr>
+				</table>
+			</div>	
+	
+	 		<input name="tipo_trn" type="hidden" id="tipo_trn" value="Add" />
+			<input name="txt_idorden" type="hidden" id="txt_idorden" value="" />
+			<p align="center"><input name="buttong" type="submit" class="btn btn-primary" id="buttong" value="Guardar" /></p>
+			<p align="center"><input name="buttonm" type="submit" class="" id="buttonm" value="Modificar" /> | <input name="buttone" type="button" class="" id="buttone" value="Eliminar" /> </p>
+		</form>
 	</div>
- <input name="tipo_trn" type="hidden" id="tipo_trn" value="Add" />
- <input name="txt_idorden" type="hidden" id="txt_idorden" value="" />
-<p align="center"><input name="buttong" type="submit" class="btn btn-primary" id="buttong" value="Guardar" /></p>
-<p align="center"><input name="buttonm" type="submit" class="" id="buttonm" value="Modificar" /> | <input name="buttone" type="button" class="" id="buttone" value="Eliminar" /> </p>
-
-
-</form>
-</div>
 
 
 <?php

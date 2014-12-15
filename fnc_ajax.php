@@ -50,9 +50,29 @@ switch($op){
 				echo json_encode($array);
 			}
 	break;
+
+	case "reload_mailPedido":			
+			$datos = $db->getOrden($id);
+			foreach($datos as $dat):											 
+						$optica = $dat['nombretrabajo'];
+			endforeach;
+			$men = "Orden de Pedido en Linea realizado por $optica";
+			
+			if(mail($des,$asu,$men,$rem))
+			{
+				$array[0] 	= 	'                   Gracias por su Pedido. Pedido en Linea enviado con exito!!!';
+				echo json_encode($array); 
+			}
+			else
+			{
+				$array[0] 	=	 '                         Fallo al enviar la Solicitud de Canje';
+				echo json_encode($array);
+			}
+			
+	break;
 	
 	case "reload_buscara":
-			$datos = $db->getDatosOrdenId($id);
+			$datos = $db->getDatosOrdenId($id,$optica);
 			if (!$datos)
 			{
 				//echo 'esta pasando por aqui';

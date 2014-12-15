@@ -109,10 +109,10 @@
 			return $this->detalle;			
 		}
 		
-		public function getDatosOrdenId($id=null)
+		public function getDatosOrdenId($id=null,$optica=null)
 		{			
 			self::setDatos();
-			$sql = 'SELECT * FROM ordenes WHERE id_orden =  ' . $id;			
+			$sql = "SELECT * FROM ordenes WHERE optica =  $optica and no_control = $id";			
 			$stm=$this->pdo->prepare($sql);
 			$stm->execute();					
 			while ($row=$stm->fetch())
@@ -186,7 +186,7 @@
 			$observaciones	=	$info[observaciones];
 							
 			$stmt->execute();
-			header('Location: frm_pedidos.php?m=1');
+			//header('Location: frm_pedidos.php?m=1');
 		}
 		
 		public function getUpdateOrden($info)
@@ -288,6 +288,20 @@
 			header('Location: frm_pedidos.php?m=2');
 		}
 		
+
+		public function getOrden($id=null)
+		{			
+			self::setDatos();
+			$sql = 'SELECT nombretrabajo FROM cliente WHERE codigocliente =  ' . $id;					
+			$stm=$this->pdo->prepare($sql);
+			$stm->execute();					
+			while ($row=$stm->fetch())
+			{
+				$this->datos[] = $row;				
+			}
+			return $this->datos;			
+		}
+
 		public function getDeleteOrden($info)
 		{
 			$sql = "delete from ordenes where id_orden = ?";

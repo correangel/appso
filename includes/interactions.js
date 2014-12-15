@@ -52,19 +52,21 @@ $(document).ready(function () {
 	
 	$('#button_search').click(function(evento){
 		valbus = $("#txt_busca_numero").val();
-		if(valbus == "") {
-			alert ('Por Favor Introduzca un Número Correlativo');
-			$('#txt_busca_numero').focus();
+		valopt = $("#txt_codOptica").val();
+		if(valbus == "" || valopt == "") {
+			alert ('Por Favor Introduzca Valores Validos');
+			$('#txt_codOptica').focus();
 		}
 	});
 	
 	$("#button_search").click(function(evento){	
 		valbus	=	$("#txt_busca_numero").val();		
+		valopt  =   $("#txt_codOptica").val();
 		vurl		=	'fnc_ajax.php';
 		$.ajax({                                      
 		  url: vurl,             //the script to call to get data          
 		  //data: "op=reload_capacidadx", //you can insert url argumnets here to pass to api.php for example "id=5&parent=6"
-		  data:   {op 		: "reload_buscara", id:  valbus },													
+		  data:   {op 		: "reload_buscara", id:  valbus, optica: valopt },													
 		  type: "GET",
 		  dataType: "json",		  
 		  success: function(data)          //on recieve of reply
@@ -654,5 +656,30 @@ $(document).ready(function () {
 	$("#button_logout").click(function(evento){		
 		window.location = 'logout.php';		
 	});
+
+	$("#buttong").click(function(evento){	
+		valdest  	=	$("#txt_mailDestino").val();;
+		valasun		=	$("#txt_asunto").val();
+		valcont		= 	$("#id_optica").val();
+		valdesd		=	$("#txt_mailOrigen").val();
+		
+		vurl		=	'fnc_ajax.php';
+		$.ajax({                                      
+		  url: vurl,             //the script to call to get data          
+		  //data: "op=reload_capacidadx", //you can insert url argumnets here to pass to api.php for example "id=5&parent=6"
+		  data:   {op 		: "reload_mailPedido",des: valdest, asu: valasun, id: valcont, rem: valdesd},
+		  type: "GET",
+		  dataType: "json",		  
+		  success: function(data)          //on recieve of reply
+		  {
+			$('#txtmensaje').val(data[0]);
+			
+		  } ,
+			error:function (xhr, ajaxOptions, thrownError){
+                    alert(xhr.status);
+                    alert(xhr.responseText);
+		    }    		  
+		});
+	});	
 	
 });

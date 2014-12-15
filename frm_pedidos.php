@@ -8,7 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Formulario de Ordenes en Linea</title>
-<meta name='viewport' content='width=device-width, inicial scale=1.0'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <link type="text/css" href="styles/start/jquery-ui-1.8.23.custom.css" rel="Stylesheet" />
 <script src="includes/jquery-1.8.0.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="includes/jquery-ui-1.8.23.custom.min.js"></script>
@@ -49,7 +49,7 @@ label.error {
 		</div>
 	</header>
 
-	<div class="container" align="center">	
+	<div class="container spaceField" align="center">	
 		<h4><strong>FORMULARIO DE ORDENES DE TRABAJO</strong></h4>
 		<input name="button_search" type="button" class="btn btn-primary" id="button_add" value="AGREGAR" />
   		<input name="button_buscar" type="button" class="btn btn-primary" id="button_buscar" value="CONSULTAR" />
@@ -58,8 +58,10 @@ label.error {
 	</div>	
 	
 	<div class="container" style="display:none" id="consulta" align="center">
-		Buscar Correlativo de Orden:
-		<input name="txt_busca_numero" type="text" class="required" id="txt_busca_numero" value="" size="50" />
+		Código Optica:
+		<input name="txt_codOptica" type="text" class="required" id="txt_codOptica" value="" size="5" />
+		No. de Orden:
+		<input name="txt_busca_numero" type="text" class="required" id="txt_busca_numero" value="" size="5" />
 		<input name="button_search" type="button" class="btn btn-success" id="button_search" value="BUSCAR" />  
 	</div>
 	<br />
@@ -493,9 +495,17 @@ label.error {
 	
 	 		<input name="tipo_trn" type="hidden" id="tipo_trn" value="Add" />
 			<input name="txt_idorden" type="hidden" id="txt_idorden" value="" />
+			<input name="txt_mailDestino" type="hidden" id="txt_mailDestino" value="raures01@hotmail.com">
+			<input name="txt_mailOrigen" type="hidden" id="txt_mailOrigen" value="info@solucionoptica.com">			
+			<input name="txt_asunto" type="hidden" id="txt_asunto" value="Nuevo Pedido en Linea">
+			
 			<p align="center"><input name="buttong" type="submit" class="btn btn-primary" id="buttong" value="Guardar" /></p>
-			<p align="center"><input name="buttonm" type="submit" class="" id="buttonm" value="Modificar" /> | <input name="buttone" type="button" class="" id="buttone" value="Eliminar" /> </p>
+			<p align="center"><input name="buttonm" type="submit" class="btn btn-primary" id="buttonm" value="Modificar" /> | <input name="buttone" type="button" class="btn btn-danger" id="buttone" value="Eliminar" /> </p>
 		</form>
+
+		<div class="container" align="center">	
+			<input name="txtmensaje" type="text" class="lblsky" id="txtmensaje" value="" size="70" readonly="readonly" align="middle" />
+		</div>
 	</div>
 
 

@@ -2,6 +2,19 @@
 	require('includes/fnc.php');
 	require_once('class/class_db.php');	
 	verifica_sesion();
+
+	$cliente = $_SESSION['cliente'];			
+	$db = new Database();
+		
+		//obtiene datos de Cliente
+		$datos_cliente = $db->getOrden($cliente);
+		if (!$datos)
+			{
+				//echo 'esta pasando por aqui';				
+			}
+		foreach($datos_cliente as $dat):											 
+				$optica = $dat['nombretrabajo'];				
+		endforeach;		
 ?>
 
 <!DOCTYPE html>
@@ -73,12 +86,12 @@ label.error {
 					<label for='id_optica'>Nombre de la Optica:</label>
 				</article>
 				<article class="col-md-5">
-
-					<?=$info[id_lote];?><select name="id_optica" id="id_optica" class="textbox form-control input-sm" >
+					<input name="id_optica" type="text" class="required form-control input-sm" id="txt_control" value="<?= $optica ?>" disabled />
+					<!--<?=$info[id_lote];?><select name="id_optica" id="id_optica" class="textbox form-control input-sm" >
 					                        <?php $db = new Database();
 												$db->getOpciones('cliente','codigocliente','nombretrabajo');
 											?>										    
-			        		            </select>
+			        		            </select>-->
 				</article>
 			</div>
 
@@ -238,10 +251,10 @@ label.error {
 						<input name="op_tipo" type="radio" class="required " id="op_tipo" value="Convencional" /> Convencional
 					</article>
 					<article class="col-md-3">
-						<input name="op_material" type="radio" class="required " id="op_material" value="policarbonato" /> Policarbonato
+						<input name="op_material" type="radio" class="required " id="op_material" value="policarbonato" checked /> Policarbonato
 					</article>
 					<article class="col-md-3">
-						<input name="op_color" type="radio" class="required " id="op_color" value="blanco" /> Blanco
+						<input name="op_color" type="radio" class="required " id="op_color" value="blanco" checked /> Blanco
 					</article>
 				</div>
 
@@ -259,7 +272,7 @@ label.error {
 
 				<div class="container row">
 					<article class="col-md-3 col-md-offset-1">
-						<input name="op_tipo" type="radio" class="required" id="op_tipo3" value="Perfect Vision" /> Perfect Vision
+						<input name="op_tipo" type="radio" class="required" id="op_tipo3" value="Perfect Vision" checked /> Perfect Vision
 					</article>
 					<article class="col-md-3">
 						<td width="300" align="left"><input name="op_tipo" type="radio" class="required" id="op_tipo4" value="Precise Form" /> Precise Form				
@@ -285,22 +298,22 @@ label.error {
 				<div class="container row" align="left">
 					<article class="col-md-6 ">
 						<input name="opcion_var" type="radio" class="required" id="opcion_var1" value="" /> 
-						<input name="txt_var1" type="text" class="required" id="txt_var1" value="" size="50" />
+						<input name="txt_var1" type="text" class="required" id="txt_var1" value="POLICARBONATO BLANCO PROGRESIVO INITIAL PERFECT VISION" size="50" />
 					</article>
 					<article class="col-md-6">
 						<input name="opcion_var" type="radio" class="required" id="opcion_var2" value="" /> 
-						<input name="txt_var2" type="text" class="required" id="txt_var2" value="" size="50" />
+						<input name="txt_var2" type="text" class="required" id="txt_var2" value="POLICARBONATO BLANCO PROGRESIVO PROFESIONAL  PERFECT VISION" size="50" />
 					</article>
 				</div>
 
 				<div class="container row" align="left">
 					<article class="col-md-6 ">
 						<input name="opcion_var" type="radio" class="required" id="opcion_var3" value="" />  
-						<input name="txt_var3" type="text" class="required" id="txt_var3" value="" size="50" />
+						<input name="txt_var3" type="text" class="required" id="txt_var3" value="POLICARBONATO BLANCO MONOFOCAL COOL PERFECT VISION" size="50" />
 					</article>
 					<article class="col-md-6">
 						<input name="opcion_var" type="radio" class="required" id="opcion_var4" value="" />  
-						<input name="txt_var4" type="text" class="required" id="txt_var4" value="" size="50" />
+						<input name="txt_var4" type="text" class="required" id="txt_var4" value="POLICARBONATO BLANCO MONOFOCAL PV THIN PERFECT VISION" size="50" />
 					</article>
 				</div>
 
@@ -495,7 +508,7 @@ label.error {
 	
 	 		<input name="tipo_trn" type="hidden" id="tipo_trn" value="Add" />
 			<input name="txt_idorden" type="hidden" id="txt_idorden" value="" />
-			<input name="txt_mailDestino" type="hidden" id="txt_mailDestino" value="raures01@hotmail.com">
+			<input name="txt_mailDestino" type="hidden" id="txt_mailDestino" value="raures01@gmail.com;safcrace@gmail.com">
 			<input name="txt_mailOrigen" type="hidden" id="txt_mailOrigen" value="info@solucionoptica.com">			
 			<input name="txt_asunto" type="hidden" id="txt_asunto" value="Nuevo Pedido en Linea">
 			

@@ -10,7 +10,7 @@
 //	alert("Ingrese afiliado y/o contraseña","login.php");    
 //}
 $validacion = $db->getValidacionCliente($cliente,$clave);
-			
+						
 			if (!$validacion)
 			{
 				//alert("Usuario o contraseña inválida","login.php");	
@@ -20,9 +20,8 @@ $validacion = $db->getValidacionCliente($cliente,$clave);
 			foreach($validacion as $val):	
 						$cliente = $val['codigocliente'];							 
 						$contra   = $val['clave'];
-			endforeach;
-
+			endforeach;			
  
-  $_SESSION["afi_tarjeta"]=$cliente;
+  $_SESSION["cliente"]=$cliente;
   redireccionar("frm_pedidos.php");
 ?>

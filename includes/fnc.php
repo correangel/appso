@@ -3,9 +3,9 @@ session_start();
 
 function verifica_sesion()
 {
-	if (!isset($_SESSION['afi_tarjeta']))
-	{		
-		redireccionar("login.php");		
+	if ((!isset($_SESSION['afi_tarjeta'])) & (!isset($_SESSION['cliente'])))
+	{	    
+		redireccionar("frm_menu.php");		
 	}
 }
 import_request_variables("GPC");

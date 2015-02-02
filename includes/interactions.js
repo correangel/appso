@@ -123,6 +123,7 @@ $(document).ready(function () {
 	});
    
 	//Se cargan datos para hacer el query de variedades
+	/*
 	$("#op_tipo").change(function(evento){
 		valfamilia = $("#op_tipo").val();
 		$('#txt_familia').val(valfamilia);
@@ -441,7 +442,7 @@ $(document).ready(function () {
                     alert(xhr.responseText);
 		    }    		  
 		});
-	});
+	});*/
 	
 	$("#buttono").click(function(evento){			
 		var categorias = new Array(); 
@@ -479,6 +480,135 @@ $(document).ready(function () {
 			$("#beneficiario").css("display","block");		
 		}
 	});
+
+	/*Despliega Opciones segun el usuario vaya avanzando*/
+
+	$("#op_tipo").click(function(){	
+			valfamilia = $("#op_tipo").val();
+			$('#txt_familia').val(valfamilia);	
+			$(".question2").css("display","block");
+			$('#op_focal').focus();			
+						
+	});	
+
+	$("#op_tipo2").click(function(){	
+			valfamilia = $("#op_tipo2").val();
+			$('#txt_familia').val(valfamilia);	
+			$(".question2").css("display","block");
+			$('#op_focal').focus();			
+						
+	});	
+
+	$("#op_tipo3").click(function(){	
+			valfamilia = $("#op_tipo3").val();
+			$('#txt_familia').val(valfamilia);	
+			$(".question2").css("display","block");
+			$('#op_focal').focus();			
+						
+	});	
+
+	$("#op_tipo4").click(function(){	
+			valfamilia = $("#op_tipo4").val();
+			$('#txt_familia').val(valfamilia);	
+			$(".question2").css("display","block");
+			$('#op_focal').focus();			
+						
+	});	
+
+	$("#op_focal").click(function(){	
+			valfocalidad = $("#op_focal").val();
+			$('#txt_focalidad').val(valfocalidad);	
+			$(".question3").css("display","block");
+			$('#op_material').focus();			
+						
+	});	
+
+	$("#op_focal2").click(function(){	
+			valfocalidad = $("#op_focal2").val();
+			$('#txt_focalidad').val(valfocalidad);	
+			$(".question3").css("display","block");
+			$('#op_material').focus();			
+						
+	});	
+
+	$("#op_focal3").click(function(){	
+			valfocalidad = $("#op_focal3").val();
+			$('#txt_focalidad').val(valfocalidad);	
+			$(".question3").css("display","block");
+			$('#op_material').focus();			
+						
+	});	
+
+	$("#op_material").click(function(){	
+			valmaterial = $("#op_material").val();
+			$('#txt_material').val(valmaterial);	
+			$(".question4").css("display","block");
+			$('#op_color').focus();			
+						
+	});	
+
+	$("#op_material2").click(function(){	
+			valmaterial = $("#op_material2").val();
+			$('#txt_material').val(valmaterial);	
+			$(".question4").css("display","block");
+			$('#op_color').focus();				
+	});	
+
+	$("#op_color").click(function(){	
+			valcolor = $("#op_color").val();
+			$('#txt_color').val(valcolor);	
+			$(".question5").css("display","block");
+			$('#op_marca').focus();			
+						
+	});	
+
+	$("#op_color2").click(function(){	
+			valcolor = $("#op_color2").val();
+			$('#txt_color').val(valcolor);	
+			$(".question5").css("display","block");
+			$('#op_marca').focus();			
+						
+	});	
+
+	$("#op_color3").click(function(){	
+			valcolor = $("#op_color3").val();
+			$('#txt_color').val(valcolor);	
+			$(".question5").css("display","block");
+			$('#op_marca').focus();			
+						
+	});	
+
+	$("#op_color4").click(function(){	
+			valcolor = $("#op_color4").val();
+			$('#txt_color').val(valcolor);	
+			$(".question5").css("display","block");
+			$('#op_marca').focus();			
+						
+	});	
+
+	$("#op_marca").click(function(){	
+			valmarca = $("#op_marca").val();
+			$('#txt_marca').val(valmarca);	
+			//$(".question3").css("display","block");
+			$('#opcion_var1').focus();			
+						
+	});	
+
+	$("#op_marca2").click(function(){	
+			valmarca = $("#op_marca2").val();
+			$('#txt_marca').val(valmarca);	
+			//$(".question3").css("display","block");
+			$('#opcion_var1').focus();			
+						
+	});	
+
+	$("#op_marca3").click(function(){	
+			valmarca = $("#op_marca3").val();
+			$('#txt_marca').val(valmarca);	
+			//$(".question3").css("display","block");
+			$('#opcion_var1').focus();			
+						
+	});	
 	
 	$("#opcion_var1").click(function(){		
 			valvar = $('#txt_var1').val();

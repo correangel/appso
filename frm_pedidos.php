@@ -117,6 +117,216 @@ label.error {
 				</article>
 			</div>
 
+			<!--Sección Selección de Variedad -->
+			<div class="container row spaceField" align="center">
+				<article class="col-md-3">
+					<label for="txt_variedad">VARIEDAD DE LENTE</label>
+				</article>
+				<article class="col-md-6">
+					<textarea name="txt_variedad" rows="2" cols="74" class="textbox form-control" id="txt_variedad" type="text" ></textarea>
+				</article>
+				<article class="col-md-2">
+					<input name="buttonv" type="button" class="btn btn-primary" id="buttonv" value="Seleccionar" />
+				</article>	
+			</div>
+
+			<div class="container" style="display:block" id="informacion">
+
+				<div class="container row" align="center">
+					<h3><small>POR FAVOR SELECCIONE SU CONFIGURACION</small></h3>
+				</div>
+
+				<div class="container row">
+					<div class="col-md-2">
+						<label for="tecnologia">TECNOLOGIA</label>
+					</div>
+					<div class="col-md-2 question2" style="display:none">
+						<label for="focalidad">FOCALIDAD</label>
+					</div>
+					<div class="col-md-2 question3" style="display:none">
+						<label for="material">MATERIAL</label>
+					</div>
+					<div class="col-md-2 question4" style="display:none">
+						<label for="color">COLOR</label>
+					</div>
+					<div class="col-md-2 question5" style="display:none">
+						<label for="marca">MARCA</label>
+					</div>
+				</div>
+
+				<div class="container row">
+					<div class="col-md-2">
+						<input name="op_tipo" type="radio" class="required " id="op_tipo" value="convencional" /> Convencional
+					</div>
+					<div class="col-md-2 question2" style="display:none">
+						<input name="op_focal" type="radio" class="required " id="op_focal" value="monofocal" /> Monofocal
+					</div>
+					<div class="col-md-2 question3" style="display:none">
+						<input name="op_material" type="radio" class="required " id="op_material" value="policarbonato" /> Policarbonato
+					</div>
+					<div class="col-md-2 question4" style="display:none">
+						<input name="op_color" type="radio" class="required " id="op_color" value="blanco" /> Blanco
+					</div>
+					<div class="col-md-2 question5" style="display:none">
+						<input name="op_marca" type="radio" class="required " id="op_marca" value="CZ" /> Carl Zeiss
+					</div>
+				</div>
+
+				<div class="container row">
+					<div class="col-md-2">
+						<input name="op_tipo" type="radio" class="required" id="op_tipo2" value="Basic Vision" /> Basic Vision
+					</div>
+					<div class="col-md-2 question2" style="display:none">
+						<input name="op_focal" type="radio" class="required " id="op_focal2" value="bifocal" /> Bifocal
+					</div>
+					<div class="col-md-2 question3" style="display:none">
+						<input name="op_material" type="radio" class="required" id="op_material2" value="plastico" /> Plástico
+					</div>
+					<div class="col-md-2 question4" style="display:none">
+						<input name="op_color" type="radio" class="required" id="op_color2" value="brown" /> Café
+					</div>
+					<div class="col-md-2 question5" style="display:none">
+						<input name="op_marca" type="radio" class="required " id="op_marca2" value="VE" /> Vision Easy
+					</div>
+				</div>
+
+				<div class="container row">
+					<div class="col-md-2">
+						<input name="op_tipo" type="radio" class="required" id="op_tipo3" value="Perfect Vision" /> Perfect Vision
+					</div>
+					<div class="col-md-2 question2" style="display:none">
+						<input name="op_focal" type="radio" class="required " id="op_focal3" value="Progresivo" /> Progresivo
+					</div>	
+					<div class="col-md-2 col-md-offset-2 question4" style="display:none">
+						<input name="op_color" type="radio" class="required" id="op_color3" value="Grey" /> Gris
+					</div>	
+					<div class="col-md-2 question5" style="display:none">
+						<input name="op_marca" type="radio" class="required " id="op_marca3" value="SO" /> Solución Optica
+					</div>					
+				</div>
+
+				<div class="container row">
+					<div class="col-md-2">
+						<input name="op_tipo" type="radio" class="required" id="op_tipo4" value="Precise Form" /> Precise Form
+					</div>	
+					<div class="col-md-2 col-md-offset-4 question4" style="display:none">
+						<input name="op_color" type="radio" class="required" id="op_color4" value="otro" /> Otro
+					</div>					
+				</div>
+
+				<div class="container row" align="center">
+					<div class="col-md-2">
+						<input name="txt_familia" class="form-control input-sm" type="text" id="txt_familia" value="Convencional" />
+					</div>
+					<div class="col-md-2">
+						<input name="txt_focalidad" class="form-control input-sm" type="text" id="txt_focalidad" value="Monofocal" />
+					</div>
+					<div class="col-md-2">
+						<input name="txt_material" class="form-control input-sm" type="text" id="txt_material" value="Policarbonato" />
+					</div>
+					<div class="col-md-2">
+						<input name="txt_color" class="form-control input-sm" type="text" id="txt_color" value="Blanco" />
+					</div>
+					<div class="col-md-2">
+						<input name="txt_marca" class="form-control input-sm" type="text" id="txt_marca" value="CZ" />
+					</div>
+				</div>
+
+				<div class="container row" align="center">
+					<h3><small>POR FAVOR SELECCIONE OPCION</small></h3>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var1" value="" /> 
+						<input name="txt_var1" type="text" class="required" id="txt_var1" value="POLICARBONATO BLANCO PROGRESIVO INITIAL PERFECT VISION" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var2" value="" /> 
+						<input name="txt_var2" type="text" class="required" id="txt_var2" value="POLICARBONATO BLANCO PROGRESIVO PROFESIONAL  PERFECT VISION" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var3" value="" />  
+						<input name="txt_var3" type="text" class="required" id="txt_var3" value="POLICARBONATO BLANCO MONOFOCAL COOL PERFECT VISION" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var4" value="" />  
+						<input name="txt_var4" type="text" class="required" id="txt_var4" value="POLICARBONATO BLANCO MONOFOCAL PV THIN PERFECT VISION" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var5" value="" />   
+						<input name="txt_var5" type="text" class="required" id="txt_var5" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var6" value="" />   
+						<input name="txt_var6" type="text" class="required" id="txt_var6" value="" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var7" value="" />    
+						<input name="txt_var7" type="text" class="required" id="txt_var7" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var8" value="" />    
+						<input name="txt_var8" type="text" class="required" id="txt_var8" value="" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var9" value="" />     
+						<input name="txt_var9" type="text" class="required" id="txt_var9" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var10" value="" />     
+						<input name="txt_var10" type="text" class="required" id="txt_var10" value="" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var11" value="" />      
+						<input name="txt_var11" type="text" class="required" id="txt_var11" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var12" value="" />      
+						<input name="txt_var12" type="text" class="required" id="txt_var12" value="" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var13" value="" />       
+						<input name="txt_var13" type="text" class="required" id="txt_var13" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var14" value="" />       
+						<input name="txt_var14" type="text" class="required" id="txt_var14" value="" size="50" />
+					</article>
+				</div>
+
+				<div class="container row" align="left">
+					<article class="col-md-6 ">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var15" value="" />        
+						<input name="txt_var15" type="text" class="required" id="txt_var15" value="" size="50" />
+					</article>
+					<article class="col-md-6">
+						<input name="opcion_var" type="radio" class="required" id="opcion_var16" value="" />        
+						<input name="txt_var16" type="text" class="required" id="txt_var16" value="" size="50" />
+					</article>
+				</div>
+
+			</div>		
+
+
 			<div class="container row" align="center">
 				<article class="col-md-1">
 					<label for="ojo">OJO</label> 
@@ -216,175 +426,7 @@ label.error {
 				</article>			
 			</div>
 
-			<div class="container row spaceField" align="center">
-				<article class="col-md-3">
-					<label for="txt_variedad">VARIEDAD DE LENTE</label>
-				</article>
-				<article class="col-md-6">
-					<textarea name="txt_variedad" rows="2" cols="74" class="textbox form-control" id="txt_variedad" type="text" ></textarea>
-				</article>
-				<article class="col-md-2">
-					<input name="buttonv" type="button" class="btn btn-primary" id="buttonv" value="Seleccionar" />
-				</article>	
-			</div>
-
-			<div class="container" style="display:none" id="informacion">
-
-				<div class="container row" align="center">
-					<h3><small>POR FAVOR SELECCIONE SU CONFIGURACION</small></h3>
-				</div>
-
-				<div class="container row">
-					<article class="col-md-3 col-md-offset-1">
-						<label for="tipo">TIPO</label>
-					</article>
-					<article class="col-md-3">
-						<label for="material">MATERIAL</label>
-					</article>
-					<article class="col-md-3">
-						<label for="color">COLOR</label>
-					</article>
-				</div>
-
-				<div class="container row">
-					<article class="col-md-3 col-md-offset-1">
-						<input name="op_tipo" type="radio" class="required " id="op_tipo" value="Convencional" /> Convencional
-					</article>
-					<article class="col-md-3">
-						<input name="op_material" type="radio" class="required " id="op_material" value="policarbonato" checked /> Policarbonato
-					</article>
-					<article class="col-md-3">
-						<input name="op_color" type="radio" class="required " id="op_color" value="blanco" checked /> Blanco
-					</article>
-				</div>
-
-				<div class="container row">
-					<article class="col-md-3 col-md-offset-1">
-						<input name="op_tipo" type="radio" class="required" id="op_tipo2" value="Basic Vision" /> Basic Vision
-					</article>
-					<article class="col-md-3">
-						<input name="op_material" type="radio" class="required" id="op_material2" value="plastico" /> Plástico
-					</article>
-					<article class="col-md-3">
-						<input name="op_color" type="radio" class="required" id="op_color2" value="otro" /> Otro
-					</article>
-				</div>
-
-				<div class="container row">
-					<article class="col-md-3 col-md-offset-1">
-						<input name="op_tipo" type="radio" class="required" id="op_tipo3" value="Perfect Vision" checked /> Perfect Vision
-					</article>
-					<article class="col-md-3">
-						<td width="300" align="left"><input name="op_tipo" type="radio" class="required" id="op_tipo4" value="Precise Form" /> Precise Form				
-					</article>
-				</div>
-
-				<div class="container row" align="center">
-					<article class="col-md-3 col-md-offset-1">
-						<input name="txt_familia" class="form-control input-sm" type="text" id="txt_familia" value="Convencional" />
-					</article>
-					<article class="col-md-3">
-						<input name="txt_material" class="form-control input-sm" type="text" id="txt_material" value="Policarbonato" />
-					</article>
-					<article class="col-md-3">
-						<input name="txt_color" class="form-control input-sm" type="text" id="txt_color" value="Blanco" />
-					</article>
-				</div>
-
-				<div class="container row" align="center">
-					<h3><small>POR FAVOR SELECCIONE OPCION</small></h3>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var1" value="" /> 
-						<input name="txt_var1" type="text" class="required" id="txt_var1" value="POLICARBONATO BLANCO PROGRESIVO INITIAL PERFECT VISION" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var2" value="" /> 
-						<input name="txt_var2" type="text" class="required" id="txt_var2" value="POLICARBONATO BLANCO PROGRESIVO PROFESIONAL  PERFECT VISION" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var3" value="" />  
-						<input name="txt_var3" type="text" class="required" id="txt_var3" value="POLICARBONATO BLANCO MONOFOCAL COOL PERFECT VISION" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var4" value="" />  
-						<input name="txt_var4" type="text" class="required" id="txt_var4" value="POLICARBONATO BLANCO MONOFOCAL PV THIN PERFECT VISION" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var5" value="" />   
-						<input name="txt_var5" type="text" class="required" id="txt_var5" value="" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var6" value="" />   
-						<input name="txt_var6" type="text" class="required" id="txt_var6" value="" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var7" value="" />    
-						<input name="txt_var7" type="text" class="required" id="txt_var7" value="" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var8" value="" />    
-						<input name="txt_var8" type="text" class="required" id="txt_var8" value="" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var9" value="" />     
-						<input name="txt_var9" type="text" class="required" id="txt_var9" value="" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var10" value="" />     
-						<input name="txt_var10" type="text" class="required" id="txt_var10" value="" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var11" value="" />      
-						<input name="txt_var11" type="text" class="required" id="txt_var11" value="" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var12" value="" />      
-						<input name="txt_var12" type="text" class="required" id="txt_var12" value="" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var13" value="" />       
-						<input name="txt_var13" type="text" class="required" id="txt_var13" value="" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var14" value="" />       
-						<input name="txt_var14" type="text" class="required" id="txt_var14" value="" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var15" value="" />        
-						<input name="txt_var15" type="text" class="required" id="txt_var15" value="" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var16" value="" />        
-						<input name="txt_var16" type="text" class="required" id="txt_var16" value="" size="50" />
-					</article>
-				</div>
-
-			</div>		
-			
+						
 			<div class="container row spaceField" align="center">
 				<article class="col-md-3">
 					<label for="colores">COLORES ESPECIALES</label>

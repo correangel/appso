@@ -8,7 +8,7 @@ function verifica_sesion()
 		redireccionar("frm_menu.php");		
 	}
 }
-import_request_variables("GPC");
+//import_request_variables("GPC");
 //error_reporting(E_ERROR);
 
 $fecha=date("Y-m-d",mktime(date("H")-1,date("i"),date("s"),date("m"),date("d"),date("Y")));
@@ -26,7 +26,7 @@ $bgf1="#ECF2F9";
 $bgf2="#FFFFFF";
 //**FIN DE COLORES DE DETALLE*****
 
-/*foreach($_POST as $nombre_campo => $valor){ 
+foreach($_POST as $nombre_campo => $valor){ 
    $asignacion = "\$" . $nombre_campo . "='" . $valor . "';"; 
    eval($asignacion); 
 }
@@ -34,7 +34,7 @@ $bgf2="#FFFFFF";
 foreach($_GET as $nombre_campo => $valor){ 
    $asignacion = "\$" . $nombre_campo . "='" . $valor . "';"; 
    eval($asignacion); 
-}*/
+}
 
 function registro($res){
   return mysql_fetch_array($res);

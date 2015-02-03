@@ -130,7 +130,7 @@ label.error {
 				</article>	
 			</div>
 
-			<div class="container" style="display:block" id="informacion">
+			<div class="container" style="display:none" id="informacion">
 
 				<div class="container row" align="center">
 					<h3><small>POR FAVOR SELECCIONE SU CONFIGURACION</small></h3>
@@ -156,16 +156,16 @@ label.error {
 
 				<div class="container row">
 					<div class="col-md-2">
-						<input name="op_tipo" type="radio" class="required " id="op_tipo" value="convencional" /> Convencional
+						<input name="op_tipo" type="radio" class="required " id="op_tipo" value="Convencional" /> Convencional
 					</div>
 					<div class="col-md-2 question2" style="display:none">
-						<input name="op_focal" type="radio" class="required " id="op_focal" value="monofocal" /> Monofocal
+						<input name="op_focal" type="radio" class="required " id="op_focal" value="Monofocal" /> Monofocal
 					</div>
 					<div class="col-md-2 question3" style="display:none">
-						<input name="op_material" type="radio" class="required " id="op_material" value="policarbonato" /> Policarbonato
+						<input name="op_material" type="radio" class="required " id="op_material" value="Policarbonato" /> Policarbonato
 					</div>
 					<div class="col-md-2 question4" style="display:none">
-						<input name="op_color" type="radio" class="required " id="op_color" value="blanco" /> Blanco
+						<input name="op_color" type="radio" class="required " id="op_color" value="Blanco" /> Blanco
 					</div>
 					<div class="col-md-2 question5" style="display:none">
 						<input name="op_marca" type="radio" class="required " id="op_marca" value="CZ" /> Carl Zeiss
@@ -177,13 +177,13 @@ label.error {
 						<input name="op_tipo" type="radio" class="required" id="op_tipo2" value="Basic Vision" /> Basic Vision
 					</div>
 					<div class="col-md-2 question2" style="display:none">
-						<input name="op_focal" type="radio" class="required " id="op_focal2" value="bifocal" /> Bifocal
+						<input name="op_focal" type="radio" class="required " id="op_focal2" value="Bifocal" /> Bifocal
 					</div>
 					<div class="col-md-2 question3" style="display:none">
-						<input name="op_material" type="radio" class="required" id="op_material2" value="plastico" /> Plástico
+						<input name="op_material" type="radio" class="required" id="op_material2" value="Plastico" /> Plástico
 					</div>
 					<div class="col-md-2 question4" style="display:none">
-						<input name="op_color" type="radio" class="required" id="op_color2" value="brown" /> Café
+						<input name="op_color" type="radio" class="required" id="op_color2" value="Brown" /> Café
 					</div>
 					<div class="col-md-2 question5" style="display:none">
 						<input name="op_marca" type="radio" class="required " id="op_marca2" value="VE" /> Vision Easy
@@ -210,7 +210,7 @@ label.error {
 						<input name="op_tipo" type="radio" class="required" id="op_tipo4" value="Precise Form" /> Precise Form
 					</div>	
 					<div class="col-md-2 col-md-offset-4 question4" style="display:none">
-						<input name="op_color" type="radio" class="required" id="op_color4" value="otro" /> Otro
+						<input name="op_color" type="radio" class="required" id="op_color4" value="Oro" /> Otro
 					</div>					
 				</div>
 
@@ -229,101 +229,105 @@ label.error {
 					</div>
 					<div class="col-md-2">
 						<input name="txt_marca" class="form-control input-sm" type="text" id="txt_marca" value="CZ" />
+					</div>					
+				</div>
+				<div class="container row spaceField" align="center">
+						<input name="buttonok" type="button" class="btn btn-primary" id="buttonok" value="Listo!" />
+				</div>
+
+				<div class="container spaceField" style="display:none" id="opciones">
+					<div class="container row" align="center">
+						<h3><small>POR FAVOR SELECCIONE OPCION</small></h3>
+					</div>
+
+					<div class="container row" align="left">
+						<article class="col-md-6 ">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var1" value="" /> 
+							<input name="txt_var1" type="text" class="required" id="txt_var1" value="POLICARBONATO BLANCO PROGRESIVO INITIAL PERFECT VISION" size="50" />
+						</article>
+						<article class="col-md-6">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var2" value="" /> 
+							<input name="txt_var2" type="text" class="required" id="txt_var2" value="POLICARBONATO BLANCO PROGRESIVO PROFESIONAL  PERFECT VISION" size="50" />
+						</article>
+					</div>
+
+					<div class="container row" align="left">
+						<article class="col-md-6 ">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var3" value="" />  
+							<input name="txt_var3" type="text" class="required" id="txt_var3" value="POLICARBONATO BLANCO MONOFOCAL COOL PERFECT VISION" size="50" />
+						</article>
+						<article class="col-md-6">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var4" value="" />  
+							<input name="txt_var4" type="text" class="required" id="txt_var4" value="POLICARBONATO BLANCO MONOFOCAL PV THIN PERFECT VISION" size="50" />
+						</article>
+					</div>
+
+					<div class="container row" align="left">
+						<article class="col-md-6 ">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var5" value="" />   
+							<input name="txt_var5" type="text" class="required" id="txt_var5" value="" size="50" />
+						</article>
+						<article class="col-md-6">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var6" value="" />   
+							<input name="txt_var6" type="text" class="required" id="txt_var6" value="" size="50" />
+						</article>
+					</div>
+
+					<div class="container row" align="left">
+						<article class="col-md-6 ">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var7" value="" />    
+							<input name="txt_var7" type="text" class="required" id="txt_var7" value="" size="50" />
+						</article>
+						<article class="col-md-6">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var8" value="" />    
+							<input name="txt_var8" type="text" class="required" id="txt_var8" value="" size="50" />
+						</article>
+					</div>
+
+					<div class="container row" align="left">
+						<article class="col-md-6 ">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var9" value="" />     
+							<input name="txt_var9" type="text" class="required" id="txt_var9" value="" size="50" />
+						</article>
+						<article class="col-md-6">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var10" value="" />     
+							<input name="txt_var10" type="text" class="required" id="txt_var10" value="" size="50" />
+						</article>
+					</div>
+
+					<div class="container row" align="left">
+						<article class="col-md-6 ">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var11" value="" />      
+							<input name="txt_var11" type="text" class="required" id="txt_var11" value="" size="50" />
+						</article>
+						<article class="col-md-6">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var12" value="" />      
+							<input name="txt_var12" type="text" class="required" id="txt_var12" value="" size="50" />
+						</article>
+					</div>
+
+					<div class="container row" align="left">
+						<article class="col-md-6 ">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var13" value="" />       
+							<input name="txt_var13" type="text" class="required" id="txt_var13" value="" size="50" />
+						</article>
+						<article class="col-md-6">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var14" value="" />       
+							<input name="txt_var14" type="text" class="required" id="txt_var14" value="" size="50" />
+						</article>
+					</div>
+
+					<div class="container row" align="left">
+						<article class="col-md-6 ">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var15" value="" />        
+							<input name="txt_var15" type="text" class="required" id="txt_var15" value="" size="50" />
+						</article>
+						<article class="col-md-6">
+							<input name="opcion_var" type="radio" class="required" id="opcion_var16" value="" />        
+							<input name="txt_var16" type="text" class="required" id="txt_var16" value="" size="50" />
+						</article>
 					</div>
 				</div>
-
-				<div class="container row" align="center">
-					<h3><small>POR FAVOR SELECCIONE OPCION</small></h3>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var1" value="" /> 
-						<input name="txt_var1" type="text" class="required" id="txt_var1" value="POLICARBONATO BLANCO PROGRESIVO INITIAL PERFECT VISION" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var2" value="" /> 
-						<input name="txt_var2" type="text" class="required" id="txt_var2" value="POLICARBONATO BLANCO PROGRESIVO PROFESIONAL  PERFECT VISION" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var3" value="" />  
-						<input name="txt_var3" type="text" class="required" id="txt_var3" value="POLICARBONATO BLANCO MONOFOCAL COOL PERFECT VISION" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var4" value="" />  
-						<input name="txt_var4" type="text" class="required" id="txt_var4" value="POLICARBONATO BLANCO MONOFOCAL PV THIN PERFECT VISION" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var5" value="" />   
-						<input name="txt_var5" type="text" class="required" id="txt_var5" value="" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var6" value="" />   
-						<input name="txt_var6" type="text" class="required" id="txt_var6" value="" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var7" value="" />    
-						<input name="txt_var7" type="text" class="required" id="txt_var7" value="" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var8" value="" />    
-						<input name="txt_var8" type="text" class="required" id="txt_var8" value="" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var9" value="" />     
-						<input name="txt_var9" type="text" class="required" id="txt_var9" value="" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var10" value="" />     
-						<input name="txt_var10" type="text" class="required" id="txt_var10" value="" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var11" value="" />      
-						<input name="txt_var11" type="text" class="required" id="txt_var11" value="" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var12" value="" />      
-						<input name="txt_var12" type="text" class="required" id="txt_var12" value="" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var13" value="" />       
-						<input name="txt_var13" type="text" class="required" id="txt_var13" value="" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var14" value="" />       
-						<input name="txt_var14" type="text" class="required" id="txt_var14" value="" size="50" />
-					</article>
-				</div>
-
-				<div class="container row" align="left">
-					<article class="col-md-6 ">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var15" value="" />        
-						<input name="txt_var15" type="text" class="required" id="txt_var15" value="" size="50" />
-					</article>
-					<article class="col-md-6">
-						<input name="opcion_var" type="radio" class="required" id="opcion_var16" value="" />        
-						<input name="txt_var16" type="text" class="required" id="txt_var16" value="" size="50" />
-					</article>
-				</div>
-
 			</div>		
 
 
@@ -365,25 +369,25 @@ label.error {
 					<label for="ojod">O.D</label>
 				</article>
 				<article class="col-md-1" align="center">
-					<input name="txt_esferad" type="text" class="required form-control input-sm" id="txt_esferad" value="" size="15" />
+					<input name="txt_esferad" type="text" class="form-control input-sm" id="txt_esferad" value="" size="15" />
 				</article>
 				<article class="col-md-1">
-					<input name="txt_cilindrod" type="text" class="required form-control input-sm" id="txt_cilindrod" value="" size="15" />
+					<input name="txt_cilindrod" type="text" class="form-control input-sm" id="txt_cilindrod" value="" size="15" />
 				</article>
 				<article class="col-md-1">
-					<input name="txt_ejed" type="text" class="required form-control input-sm" id="txt_ejed" value="" size="15" />
+					<input name="txt_ejed" type="text" class="form-control input-sm" id="txt_ejed" value="" size="15" />
 				</article>
 				<article class="col-md-1">
-					<input name="txt_prismad" type="text" class="required form-control input-sm" id="txt_prismad" value="" size="15" />
+					<input name="txt_prismad" type="text" class="form-control input-sm" id="txt_prismad" value="" size="15" />
 				</article>
 				<article class="col-md-1">
-					<input name="txt_adiciond" type="text" class="required form-control input-sm" id="txt_adiciond" value="" size="15" />
+					<input name="txt_adiciond" type="text" class="form-control input-sm" id="txt_adiciond" value="" size="15" />
 				</article>
 				<article class="col-md-1">
-					<input name="txt_alturad" type="text" class="required form-control input-sm" id="txt_alturad" value="" size="15" />
+					<input name="txt_alturad" type="text" class="form-control input-sm" id="txt_alturad" value="" size="15" />
 				</article>
 				<article class="col-md-1">
-					<input name="txt_dnpd" type="text" class="required form-control input-sm" id="txt_dnpd" value="" size="15" />
+					<input name="txt_dnpd" type="text" class="form-control input-sm" id="txt_dnpd" value="" size="15" />
 				</article>
 				<article class="col-md-1">
 					<input name="buttoni" type="button" class="btn btn-info" id="buttoni" value="Info" />
@@ -398,31 +402,31 @@ label.error {
 					<label for="ojoi">O.I</label>
 				</article>
 				<article class="col-md-1">
-					<input name="txt_esferai" type="text" class="required form-control input-sm" id="txt_esferai" value="" size="15" />
+					<input name="txt_esferai" type="text" class="form-control input-sm" id="txt_esferai" value="" size="15" />
 				</article>
 				<article class="col-md-1">
-					<input name="txt_cilindroi" type="text" class="required form-control input-sm" id="txt_cilindroi" value="" size="15" />
+					<input name="txt_cilindroi" type="text" class="form-control input-sm" id="txt_cilindroi" value="" size="15" />
 				</article>
 				<article class="col-md-1">
-					<input name="txt_ejei" type="text" class="required form-control input-sm" id="txt_ejei" value="" size="15" />
+					<input name="txt_ejei" type="text" class="form-control input-sm" id="txt_ejei" value="" size="15" />
 				</article>
 				<article class="col-md-1">
-					<input name="txt_prismai" type="text" class="required form-control input-sm" id="txt_prismai" value="" size="15" />
+					<input name="txt_prismai" type="text" class="form-control input-sm" id="txt_prismai" value="" size="15" />
 				</article>
 				<article class="col-md-1">
-					<input name="txt_adicioni" type="text" class="required form-control input-sm" id="txt_adicioni" value="" size="15" />
+					<input name="txt_adicioni" type="text" class="form-control input-sm" id="txt_adicioni" value="" size="15" />
 				</article>
 				<article class="col-md-1">
-					<input name="txt_alturai" type="text" class="required form-control input-sm" id="txt_alturai" value="" size="15" />
+					<input name="txt_alturai" type="text" class="form-control input-sm" id="txt_alturai" value="" size="15" />
 				</article>
 				<article class="col-md-1">
-					<input name="txt_dnpi" type="text" class="required form-control input-sm" id="txt_dnpi" value="" size="15" />
+					<input name="txt_dnpi" type="text" class="form-control input-sm" id="txt_dnpi" value="" size="15" />
 				</article>
 				<article class="col-md-1">
 					<p>&nbsp;</p>
 				</article>
 				<article class="col-md-2">
-					<input name="txt_distancia" type="text" class="required form-control input-sm" id="txt_distancia" value="" size="15" />
+					<input name="txt_distancia" type="text" class="form-control input-sm" id="txt_distancia" value="" size="15" />
 				</article>			
 			</div>
 
@@ -439,7 +443,7 @@ label.error {
 				</article>	
 			</div> 
 
-			<div class="container row spaceField" align="center">
+			<div class="container row " align="center">
 				<article class="col-md-6">
 					<label for="txt_montura">DATOS DE LA MONTURA</label>
 				</article>

@@ -444,6 +444,50 @@ $(document).ready(function () {
 		});
 	});*/
 	
+	$("#buttonok").click(function(evento){	
+		//valmate = $("#op_material2").val();
+		//$('#txt_material').val(valmate);
+		$("#opciones").css("display","block");
+		valtipo		=	$("#txt_familia").val();
+		valfocalidad=	$("#txt_focalidad").val();
+		valmaterial	=	$("#txt_material").val();
+		valcolor	=	$("#txt_color").val();
+		valmarca	=	$("#txt_marca").val();
+		vurl		=	'fnc_ajax.php';
+		$.ajax({                                      
+		  url: vurl,             //the script to call to get data          
+		  //data: "op=reload_capacidadx", //you can insert url argumnets here to pass to api.php for example "id=5&parent=6"
+		  data:   {op 		: "reload_variedad", tipo: valtipo, material: valmaterial, color: valcolor,
+		  										focalidad: valfocalidad, marca: valmarca },													
+		  type: "GET",
+		  dataType: "json",		  
+		  success: function(data)          //on recieve of reply
+		  {			
+			$('#txt_var1').val(data[0]);
+			$('#txt_var2').val(data[1]);
+			$('#txt_var3').val(data[2]);
+			$('#txt_var4').val(data[3]);
+			$('#txt_var5').val(data[4]);
+			$('#txt_var6').val(data[5]);
+			$('#txt_var7').val(data[6]);
+			$('#txt_var8').val(data[7]);
+			$('#txt_var9').val(data[8]);
+			$('#txt_var10').val(data[9]);
+			$('#txt_var11').val(data[10]);
+			$('#txt_var12').val(data[11]);
+			$('#txt_var13').val(data[12]);
+			$('#txt_var14').val(data[13]);
+			$('#txt_var15').val(data[14]);
+			$('#txt_var16').val(data[15]);
+			$('#txt_var1').focus();
+		  } ,
+			error:function (xhr, ajaxOptions, thrownError){
+                    alert(xhr.status);
+                    alert(xhr.responseText);
+		    }    		  
+		});
+	});
+
 	$("#buttono").click(function(evento){			
 		var categorias = new Array(); 
         $("input[name='txt_servicio[]']:checked").each(function() {

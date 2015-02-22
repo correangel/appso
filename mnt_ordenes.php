@@ -12,14 +12,14 @@
 	{
 		$accion = $_POST["tipo_trn"];
 	}
-	echo 'Esta info trae:  ' . $accion . ' y ' . $_GET['id'];
-	
+		
 	
 	
 	switch($accion){
   	  case "Add":      
                     $campos=Array();
                     $campos[optica]=strip_tags($_POST["id_optica"]);
+                    $campos[nombre]=strip_tags($_POST["txt_nombre"]);
 					$campos[no_control]=strip_tags($_POST["txt_control"]);
 					$campos[paciente]=strip_tags($_POST["txt_paciente"]);
 					$campos[esfera_der]=strip_tags($_POST["txt_esferad"]);
@@ -47,8 +47,9 @@
 					$campos[diagonal]=strip_tags($_POST["txt_diagonal"]);
 					$campos[observaciones]=strip_tags($_POST["txt_observacion"]);					
 					
-					$db->getInsOrden($campos);/*
-                    $ins=insertar("ingresos",$campos);
+					$db->getInsOrden($campos);
+					header('Location: frm_pedidos.php?m=1');
+					/*$ins=insertar("ingresos",$campos);
                     redireccionar("index1.php?op=$op&msg=Ingreso agregado!");*/
     break;
     
@@ -56,6 +57,7 @@
     case "Update":
                     $campos=Array();
                     $campos[optica]=strip_tags($_POST["id_optica"]);
+                    $campos[nombre]=strip_tags($_POST["txt_nombre"]);
 					$campos[no_control]=strip_tags($_POST["txt_control"]);
 					$campos[paciente]=strip_tags($_POST["txt_paciente"]);
 					$campos[esfera_der]=strip_tags($_POST["txt_esferad"]);
@@ -85,7 +87,7 @@
 					$campos[id_orden]=strip_tags($_POST["txt_idorden"]);
 					
 					$db->getUpdateOrden($campos);					
-
+					header('Location: frm_pedidos.php?m=2');
 					/*
                     $ins=actualizar("ingresos",$campos,"correlativo = '$pk'");
                     redireccionar("index1.php?op=$op&msg=Ingreso actualizado!");*/

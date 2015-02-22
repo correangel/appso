@@ -126,38 +126,40 @@
 		public function getInsOrden($info)
 		{
 			self::setDatos();
-			$sql = 'insert into ordenes values (null,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);';
+			$sql = 'insert into ordenes values (null,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);';
 			$stmt=$this->pdo->prepare($sql);
-			
+
 			$stmt->bindParam(1,$optica);
-			$stmt->bindParam(2,$no_control);
-			$stmt->bindParam(3,$paciente);
-			$stmt->bindParam(4,$esfera_der);
-			$stmt->bindParam(5,$cilindro_der);
-			$stmt->bindParam(6,$eje_der);
-			$stmt->bindParam(7,$prisma_der);
-			$stmt->bindParam(8,$adicion_der);
-			$stmt->bindParam(9,$altura_der);
-			$stmt->bindParam(10,$dnp_der);
-			$stmt->bindParam(11,$esfera_izq);
-			$stmt->bindParam(12,$cilindro_izq);
-			$stmt->bindParam(13,$eje_izq);
-			$stmt->bindParam(14,$prisma_izq);
-			$stmt->bindParam(15,$adicion_izq);
-			$stmt->bindParam(16,$altura_izq);
-			$stmt->bindParam(17,$dnp_izq);
-			$stmt->bindParam(18,$distancia);
-			$stmt->bindParam(19,$variedad);
-			$stmt->bindParam(20,$colores);
-			$stmt->bindParam(21,$top_vision);
-			$stmt->bindParam(22,$montura);
-			$stmt->bindParam(23,$horizontal);
-			$stmt->bindParam(24,$patilla);
-			$stmt->bindParam(25,$vertical);
-			$stmt->bindParam(26,$diagonal);
-			$stmt->bindParam(27,$observaciones);
+			$stmt->bindParam(2,$nombre);
+			$stmt->bindParam(3,$no_control);
+			$stmt->bindParam(4,$paciente);
+			$stmt->bindParam(5,$esfera_der);
+			$stmt->bindParam(6,$cilindro_der);
+			$stmt->bindParam(7,$eje_der);
+			$stmt->bindParam(8,$prisma_der);
+			$stmt->bindParam(9,$adicion_der);
+			$stmt->bindParam(10,$altura_der);
+			$stmt->bindParam(11,$dnp_der);
+			$stmt->bindParam(12,$esfera_izq);
+			$stmt->bindParam(13,$cilindro_izq);
+			$stmt->bindParam(14,$eje_izq);
+			$stmt->bindParam(15,$prisma_izq);
+			$stmt->bindParam(16,$adicion_izq);
+			$stmt->bindParam(17,$altura_izq);
+			$stmt->bindParam(18,$dnp_izq);
+			$stmt->bindParam(19,$distancia);
+			$stmt->bindParam(20,$variedad);
+			$stmt->bindParam(21,$colores);
+			$stmt->bindParam(22,$top_vision);
+			$stmt->bindParam(23,$montura);
+			$stmt->bindParam(24,$horizontal);
+			$stmt->bindParam(25,$patilla);
+			$stmt->bindParam(26,$vertical);
+			$stmt->bindParam(27,$diagonal);
+			$stmt->bindParam(28,$observaciones);
 						
 			$optica 		= 	$info[optica];
+			$nombre 		=	$info[nombre];
 			$no_control 	=	$info[no_control];
 			$paciente		=	$info[paciente];
 			$esfera_der		=	$info[esfera_der];
@@ -184,9 +186,9 @@
 			$vertical		=	$info[vertical];
 			$diagonal		=	$info[diagonal];
 			$observaciones	=	$info[observaciones];
-							
+
 			$stmt->execute();
-			//header('Location: frm_pedidos.php?m=1');
+			
 		}
 		
 		public function getUpdateOrden($info)
@@ -194,7 +196,8 @@
 			self::setDatos();
 			$sql = "update ordenes "
 				." set "
-				." optica = ?, "				
+				." optica = ?, "
+				." nombre = ?, "				
 				." no_control = ?, "
 				." paciente = ?, "
 				." esfera_der = ?, "
@@ -227,35 +230,37 @@
 			$stmt=$this->pdo->prepare($sql);
 						
 			$stmt->bindParam(1,$optica);
-			$stmt->bindParam(2,$no_control);
-			$stmt->bindParam(3,$paciente);
-			$stmt->bindParam(4,$esfera_der);
-			$stmt->bindParam(5,$cilindro_der);
-			$stmt->bindParam(6,$eje_der);
-			$stmt->bindParam(7,$prisma_der);
-			$stmt->bindParam(8,$adicion_der);
-			$stmt->bindParam(9,$altura_der);
-			$stmt->bindParam(10,$dnp_der);
-			$stmt->bindParam(11,$esfera_izq);
-			$stmt->bindParam(12,$cilindro_izq);
-			$stmt->bindParam(13,$eje_izq);
-			$stmt->bindParam(14,$prisma_izq);
-			$stmt->bindParam(15,$adicion_izq);
-			$stmt->bindParam(16,$altura_izq);
-			$stmt->bindParam(17,$dnp_izq);
-			$stmt->bindParam(18,$distancia);
-			$stmt->bindParam(19,$variedad);
-			$stmt->bindParam(20,$colores);
-			$stmt->bindParam(21,$top_vision);
-			$stmt->bindParam(22,$montura);
-			$stmt->bindParam(23,$horizontal);
-			$stmt->bindParam(24,$patilla);
-			$stmt->bindParam(25,$vertical);
-			$stmt->bindParam(26,$diagonal);
-			$stmt->bindParam(27,$observaciones);
-			$stmt->bindParam(28,$id_orden);
+			$stmt->bindParam(2,$nombre);
+			$stmt->bindParam(3,$no_control);
+			$stmt->bindParam(4,$paciente);
+			$stmt->bindParam(5,$esfera_der);
+			$stmt->bindParam(6,$cilindro_der);
+			$stmt->bindParam(7,$eje_der);
+			$stmt->bindParam(8,$prisma_der);
+			$stmt->bindParam(9,$adicion_der);
+			$stmt->bindParam(10,$altura_der);
+			$stmt->bindParam(11,$dnp_der);
+			$stmt->bindParam(12,$esfera_izq);
+			$stmt->bindParam(13,$cilindro_izq);
+			$stmt->bindParam(14,$eje_izq);
+			$stmt->bindParam(15,$prisma_izq);
+			$stmt->bindParam(16,$adicion_izq);
+			$stmt->bindParam(17,$altura_izq);
+			$stmt->bindParam(18,$dnp_izq);
+			$stmt->bindParam(19,$distancia);
+			$stmt->bindParam(20,$variedad);
+			$stmt->bindParam(21,$colores);
+			$stmt->bindParam(22,$top_vision);
+			$stmt->bindParam(23,$montura);
+			$stmt->bindParam(24,$horizontal);
+			$stmt->bindParam(25,$patilla);
+			$stmt->bindParam(26,$vertical);
+			$stmt->bindParam(27,$diagonal);
+			$stmt->bindParam(28,$observaciones);
+			$stmt->bindParam(29,$id_orden);
 						
 			$optica 		= 	$info[optica];
+			$nombre 		=	$info[nombre];
 			$no_control 	=	$info[no_control];
 			$paciente		=	$info[paciente];
 			$esfera_der		=	$info[esfera_der];
@@ -285,7 +290,7 @@
 			$id_orden		=	$info[id_orden];
 							
 			$stmt->execute();
-			header('Location: frm_pedidos.php?m=2');
+			
 		}
 		
 
@@ -336,6 +341,18 @@
     		while($row=$stm->fetch(PDO::FETCH_ASSOC)){
         		echo '<option value="'.$row['codigocliente'].'">'.$row['nombretrabajo'].'</option>';//print_r($row); 
     		}
+		}
+
+		public function getTopVision($sql=null)
+		{			
+			self::setDatos();
+			$stm=$this->pdo->prepare($sql);
+			$stm->execute();					
+			while ($row=$stm->fetch())
+			{
+				$this->datos[] = $row;				
+			}
+			return $this->datos;			
 		}
 
 	}

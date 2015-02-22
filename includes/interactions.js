@@ -91,7 +91,7 @@ $(document).ready(function () {
 			$('#txt_distancia').val(data[17]);
 			$('#txt_variedad').val(data[18]);
 			$('#txt_colores').val(data[19]);
-			$('#txt_vision').val(data[20]);
+			$('#txt_vision').val(data[20]);  
 			$('#txt_montura').val(data[21]);
 			$('#txt_horizontal').val(data[22]);
 			$('#txt_patilla').val(data[23]);
@@ -102,6 +102,9 @@ $(document).ready(function () {
 			$('#tipo_trn').val(data[28]);	
 			$('#opcion_uno').val(data[29]);
 			$('#txt_paciente').focus();
+			valor = $('#txt_vision').val(); //attr('checked', false);
+			alert(valor);
+
 		  } ,
 			error:function (xhr, ajaxOptions, thrownError){
                     alert(xhr.status);
@@ -658,7 +661,7 @@ $(document).ready(function () {
 			valvar = $('#txt_var1').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -666,7 +669,7 @@ $(document).ready(function () {
 			valvar = $('#txt_var2').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -674,7 +677,7 @@ $(document).ready(function () {
 			valvar = $('#txt_var3').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -682,7 +685,7 @@ $(document).ready(function () {
 			valvar = $('#txt_var4').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -690,15 +693,15 @@ $(document).ready(function () {
 			valvar = $('#txt_var5').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
-						
+			$('#txt_esferad').focus();			
+					
 	});	
 	
 	$("#opcion_var6").click(function(){		
 			valvar = $('#txt_var6').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -706,7 +709,7 @@ $(document).ready(function () {
 			valvar = $('#txt_var7').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -714,7 +717,7 @@ $(document).ready(function () {
 			valvar = $('#txt_var8').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -722,7 +725,7 @@ $(document).ready(function () {
 			valvar = $('#txt_var19').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -730,7 +733,7 @@ $(document).ready(function () {
 			valvar = $('#txt_var10').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -738,7 +741,7 @@ $(document).ready(function () {
 			valvar = $('#txt_var11').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -746,7 +749,7 @@ $(document).ready(function () {
 			valvar = $('#txt_var12').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -754,7 +757,7 @@ $(document).ready(function () {
 			valvar = $('#txt_var13').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -762,7 +765,7 @@ $(document).ready(function () {
 			valvar = $('#txt_var14').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -770,7 +773,7 @@ $(document).ready(function () {
 			valvar = $('#txt_var15').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});	
 	
@@ -778,11 +781,49 @@ $(document).ready(function () {
 			valvar = $('#txt_var16').val();
 			$('#txt_variedad').val(valvar);
 			$("#informacion").css("display","none");
-			$('#txt_colores').focus();			
+			$('#txt_esferad').focus();			
 						
 	});		
 		
 	$("#button_search").click(function(){
+			$("#txt_vision").attr('checked', false);
+			valor = $('#txt_vision').val();
+			alert(valor);/*
+			if (valor == 'on')
+			{
+				$("#txt_vision").attr('checked', true); 
+			}
+			else
+			{
+				$("#txt_vision").attr('checked', false);
+			}*/
+			
+	});
+
+	$("#txt_esferad").change(function(evento){			
+		valor_variedad = $('#txt_variedad').val();
+        //alert(valor_variedad);		
+		vurl			=	'fnc_ajax.php';
+		$.ajax({                                      
+		  url: vurl,             //the script to call to get data          
+		  //data: "op=reload_capacidadx", //you can insert url argumnets here to pass to api.php for example "id=5&parent=6"
+		  data:   {op 		: "reload_top", vari: valor_variedad },													
+		  type: "GET",
+		  dataType: "json",		  
+		  success: function(data)          //on recieve of reply
+		  {			
+			$('#txt_vision').val(data[0]);			
+			//$('#txt_paciente').focus();
+		  } ,
+			error:function (xhr, ajaxOptions, thrownError){
+                    alert(xhr.status);
+                    alert(xhr.responseText);
+		    }    		  
+		});
+	});	
+	
+	/*
+	$("#txt_esferad").change(function(){
 		
 			valor = $('#txt_vision').val();
 			
@@ -795,7 +836,7 @@ $(document).ready(function () {
 				$("#txt_vision").attr('checked', false);
 			}
 			
-	});	
+	});*/	
 	
 	$("#buttons").click(function(evento){
 		$("#servicios").css("display","block");		

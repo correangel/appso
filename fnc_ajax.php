@@ -114,15 +114,27 @@ switch($op){
 	break;
 	
 	case "reload_variedad":			
-			$qry	=	'select variedad from combinaciones where familia = ' . "'$tipo'" . ' AND material = ' . "'$material'" . ' AND color = ' . "'$color'" ;
+			$qry	=	'select variedad from variedades_online where Familia = ' . "'$tipo'" . 
+																	  ' AND Color = ' . "'$color'" .
+																	  ' AND Material = ' . "'$material'" .
+																	  ' AND Focalidad = ' . "'$focalidad'" .
+																	  ' AND Marca = ' . "'$marca'";
 			
 			
 			$datos = $db->getCombiVariedad($qry);
-			$i=0;
-			foreach($datos as $dat):	
-					$array[$i] = $dat['variedad'];
-					$i=$i+1;					
-			endforeach;				
+			if ($datos)
+			{
+				$i=0;
+				foreach($datos as $dat):	
+						$array[$i] = $dat['variedad'];
+						$i=$i+1;					
+				endforeach;
+			}
+			else
+			{
+				$array[0] = 'Lo sentimos no hay ninguna coincidencia';
+			}
+
 			echo json_encode($array);			
 	break;
 	
@@ -130,6 +142,20 @@ switch($op){
 			
 			$array[0] = $servicios;
 
+			echo json_encode($array);			
+	break;
+
+	case "reload_top":
+
+			$qry	=	'select TopVision from variedades_online where Variedad = ' . "'$vari'";						
+			$datos = $db->getTopVision($qry);
+			if ($datos)
+			{
+				foreach($datos as $dat):	
+						$array[0] = $dat['TopVision'];
+				endforeach;					
+			}
+			
 			echo json_encode($array);			
 	break;
 }

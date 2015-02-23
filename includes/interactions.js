@@ -102,15 +102,23 @@ $(document).ready(function () {
 			$('#tipo_trn').val(data[28]);	
 			$('#opcion_uno').val(data[29]);
 			$('#txt_paciente').focus();
-			valor = $('#txt_vision').val(); //attr('checked', false);
+			valor = $('#txt_vision').val(); 
 			alert(valor);
+			if (valor == '1')
+			{
+				$("#txt_vision").attr('checked', true); 
+			}
+			else
+			{
+				$("#txt_vision").attr('checked', false);
+			}
 
 		  } ,
 			error:function (xhr, ajaxOptions, thrownError){
                     alert(xhr.status);
                     alert(xhr.responseText);
 		    }    		  
-		});
+		});			
 	});
 	
 	$("#buttone").click(function(evento){	
@@ -784,25 +792,10 @@ $(document).ready(function () {
 			$('#txt_esferad').focus();			
 						
 	});		
-		
-	$("#button_search").click(function(){
-			$("#txt_vision").attr('checked', false);
-			valor = $('#txt_vision').val();
-			alert(valor);/*
-			if (valor == 'on')
-			{
-				$("#txt_vision").attr('checked', true); 
-			}
-			else
-			{
-				$("#txt_vision").attr('checked', false);
-			}*/
-			
-	});
-
+	
 	$("#txt_esferad").change(function(evento){			
 		valor_variedad = $('#txt_variedad').val();
-        //alert(valor_variedad);		
+        alert(valor_variedad);		
 		vurl			=	'fnc_ajax.php';
 		$.ajax({                                      
 		  url: vurl,             //the script to call to get data          
@@ -813,7 +806,17 @@ $(document).ready(function () {
 		  success: function(data)          //on recieve of reply
 		  {			
 			$('#txt_vision').val(data[0]);			
-			//$('#txt_paciente').focus();
+			vision = $('#txt_vision').val(); 
+			alert(vision);
+			if (vision == '1')
+			{
+				$("#txt_vision").attr('checked', true); 
+			}
+			else
+			{
+				$("#txt_vision").attr('checked', false);
+			}
+
 		  } ,
 			error:function (xhr, ajaxOptions, thrownError){
                     alert(xhr.status);

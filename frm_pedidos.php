@@ -447,8 +447,8 @@ label.error {
 				<article class="col-md-6">
 					<textarea name="txt_colores" rows="2" cols="74" class="textbox form-control" id="txt_colores" type="text" ><?=$info[observacion];?></textarea>
 				</article>
-				<article class="col-md-2">
-					<td colspan="2"><input type="checkbox" name="txt_vision" id="txt_vision"><label for="topVision"> TOP VISION</label>
+				<article class="col-md-2">						
+					<input type="checkbox" name="txt_vision" id="txt_vision"><label for="topVision"> TOP VISION</label>
 				</article>	
 			</div> 
 

@@ -187,7 +187,7 @@
 			$diagonal		=	$info[diagonal];
 			$observaciones	=	$info[observaciones];
 
-			$stmt->execute();
+			$stmt->execute();			
 			
 		}
 		
@@ -304,6 +304,7 @@
 			{
 				$this->datos[] = $row;				
 			}
+			
 			return $this->datos;			
 		}
 

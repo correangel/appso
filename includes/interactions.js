@@ -51,11 +51,10 @@ $(document).ready(function () {
 	});
 	
 	$('#button_search').click(function(evento){
-		valbus = $("#txt_busca_numero").val();
-		valopt = $("#txt_codOptica").val();
-		if(valbus == "" || valopt == "") {
-			alert ('Por Favor Introduzca Valores Validos');
-			$('#txt_codOptica').focus();
+		valbus = $("#txt_busca_numero").val();		
+		if(valbus == "") {
+			alert ('Por Favor Introduzca un Valor Válido');
+			$('#txt_busca_numero').focus();
 		}
 	});
 	
@@ -103,7 +102,7 @@ $(document).ready(function () {
 			$('#opcion_uno').val(data[29]);
 			$('#txt_paciente').focus();
 			valor = $('#txt_vision').val(); 
-			alert(valor);
+			//alert(valor);
 			if (valor == '1')
 			{
 				$("#txt_vision").attr('checked', true); 
@@ -795,7 +794,7 @@ $(document).ready(function () {
 	
 	$("#txt_esferad").change(function(evento){			
 		valor_variedad = $('#txt_variedad').val();
-        alert(valor_variedad);		
+        //alert(valor_variedad);		
 		vurl			=	'fnc_ajax.php';
 		$.ajax({                                      
 		  url: vurl,             //the script to call to get data          
@@ -807,7 +806,7 @@ $(document).ready(function () {
 		  {			
 			$('#txt_vision').val(data[0]);			
 			vision = $('#txt_vision').val(); 
-			alert(vision);
+			//alert(vision);
 			if (vision == '1')
 			{
 				$("#txt_vision").attr('checked', true); 
@@ -847,6 +846,7 @@ $(document).ready(function () {
 	
 	$("#button_buscar").click(function(evento){
 		$("#consulta").css("display","block");
+		$("#message").css("display","none");
 		$("#ingreso").css("display","block");
 		$("#buttong").css("display","none");
 		$("#form1")[0].reset();		
@@ -855,6 +855,7 @@ $(document).ready(function () {
 	
 	$("#button_add").click(function(evento){		
 		$("#ingreso").css("display","block");
+		$("#message").css("display","none");
 		$("#consulta").css("display","none");
 		$("#buttong").css("display","block");
 		$("#buttonm").css("display","none");
@@ -876,11 +877,13 @@ $(document).ready(function () {
 	});
 
 	$("#buttong").click(function(evento){	
-		valdest  	=	$("#txt_mailDestino").val();;
+		$("#message").css("display","block");
+		valdest  	=	$("#txt_mailDestino").val();
 		valasun		=	$("#txt_asunto").val();
 		valcont		= 	$("#id_optica").val();
 		valdesd		=	$("#txt_mailOrigen").val();
 		
+
 		vurl		=	'fnc_ajax.php';
 		$.ajax({                                      
 		  url: vurl,             //the script to call to get data          
@@ -897,7 +900,8 @@ $(document).ready(function () {
                     alert(xhr.status);
                     alert(xhr.responseText);
 		    }    		  
-		});
+		});		
+
 	});	
 	
 });

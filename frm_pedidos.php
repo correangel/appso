@@ -71,9 +71,8 @@ label.error {
   		<input name="button_logout" type="button" class="btn btn-danger" id="button_logout" value="SALIR" />
 	</div>	
 	
-	<div class="container" style="display:none" id="consulta" align="center">
-		Código Optica:
-		<input name="txt_codOptica" type="text" class="required" id="txt_codOptica" value="" size="5" />
+	<div class="container" style="display:none" id="consulta" align="center">		
+		<input name="txt_codOptica" type="hidden" id="txt_codOptica" value="<?= $cliente ?>" size="5" />
 		No. de Orden:
 		<input name="txt_busca_numero" type="text" class="required" id="txt_busca_numero" value="" size="5" />
 		<input name="button_search" type="button" class="btn btn-success" id="button_search" value="BUSCAR" />  
@@ -222,19 +221,19 @@ label.error {
 
 				<div class="container row" align="center">
 					<div class="col-md-2">
-						<input name="txt_familia" class="form-control input-sm" type="text" id="txt_familia" value="Convencional" />
+						<input name="txt_familia" class="form-control input-sm" type="hidden" id="txt_familia" value="Convencional" />
 					</div>
 					<div class="col-md-2">
-						<input name="txt_focalidad" class="form-control input-sm" type="text" id="txt_focalidad" value="Monofocal" />
+						<input name="txt_focalidad" class="form-control input-sm" type="hidden" id="txt_focalidad" value="Monofocal" />
 					</div>
 					<div class="col-md-2">
-						<input name="txt_material" class="form-control input-sm" type="text" id="txt_material" value="Policarbonato" />
+						<input name="txt_material" class="form-control input-sm" type="hidden" id="txt_material" value="Policarbonato" />
 					</div>
 					<div class="col-md-2">
-						<input name="txt_color" class="form-control input-sm" type="text" id="txt_color" value="Blanco" />
+						<input name="txt_color" class="form-control input-sm" type="hidden" id="txt_color" value="Blanco" />
 					</div>
 					<div class="col-md-2">
-						<input name="txt_marca" class="form-control input-sm" type="text" id="txt_marca" value="CZ" />
+						<input name="txt_marca" class="form-control input-sm" type="hidden" id="txt_marca" value="CZ" />
 					</div>					
 				</div>
 				<div class="container row spaceField" align="center">
@@ -477,7 +476,7 @@ label.error {
 
 			<div class="container row spaceField" align="center">
 				<article class="col-md-6">
-					<input name="txt_montura" type="text" class="required form-control" id="txt_montura" value="" size="55" />
+					<input name="txt_montura" type="text" class="required form-control" id="txt_montura" value="" size="55" placeholder="Es Montura Cerrada? Ranurada? ó con Perforaciones... Cuantas?" />
 				</article>
 				<article class="col-md-1">
 					<input name="txt_horizontal" type="text" class="required form-control" id="txt_horizontal" value="" />
@@ -580,26 +579,27 @@ label.error {
 		</div>
 	</div>
 
-
-<?php
-if (isset($_GET) and $_GET["m"]==1)
-{
+<div class="container" style="display:block" id="message">
+	<?php
+		if (isset($_GET) and $_GET["m"]==1)
+		{
+			?>
+		    <h3 align="center" style="color:#06F">El Registro se ha creado satisfactoriamente</h3>
+		    <?php	
+			
+		} elseif (isset($_GET) and $_GET["m"]==2) {
+			?>
+		    <h3 align="center" style="color:#06F">El Registro se ha modificado satisfactoriamente</h3>
+		    <?php	
+		} elseif (isset($_GET) and $_GET["m"]==3){
+			?>
+		    <h3 align="center" style="color:#06F">El Registro se ha eliminado satisfactoriamente</h3>
+		    <?php	
+		}
 	?>
-    <h3 align="center" style="color:#06F">El Registro se ha creado satisfactoriamente</h3>
-    <?php	
-	
-} elseif (isset($_GET) and $_GET["m"]==2) {
-	?>
-    <h3 align="center" style="color:#06F">El Registro se ha modificado satisfactoriamente</h3>
-    <?php	
-} elseif (isset($_GET) and $_GET["m"]==3){
-	?>
-    <h3 align="center" style="color:#06F">El Registro se ha eliminado satisfactoriamente</h3>
-    <?php	
-}
+</div>
 
 
-?>
 
 </body>
 </html>

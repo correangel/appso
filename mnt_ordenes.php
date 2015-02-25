@@ -48,6 +48,7 @@
 					$campos[observaciones]=strip_tags($_POST["txt_observacion"]);					
 					
 					$db->getInsOrden($campos);
+
 					header('Location: frm_pedidos.php?m=1');
 					/*$ins=insertar("ingresos",$campos);
                     redireccionar("index1.php?op=$op&msg=Ingreso agregado!");*/

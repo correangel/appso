@@ -56,8 +56,8 @@ switch($op){
 			foreach($datos as $dat):											 
 						$optica = $dat['nombretrabajo'];
 			endforeach;
-			$men = "Orden de Pedido en Linea realizado por $optica";
 			
+			$men = "Orden de Pedido en Linea realizado por $optica";			
 			if(mail($des,$asu,$men,$rem))
 			{
 				$array[0] 	= 	'                   Gracias por su Pedido. Pedido en Linea enviado con exito!!!';
@@ -114,7 +114,7 @@ switch($op){
 	break;
 	
 	case "reload_variedad":			
-			$qry	=	'select variedad from variedades_online where Familia = ' . "'$tipo'" . 
+			$qry	=	'select variedad from Variedades_online where Familia = ' . "'$tipo'" . 
 																	  ' AND Color = ' . "'$color'" .
 																	  ' AND Material = ' . "'$material'" .
 																	  ' AND Focalidad = ' . "'$focalidad'" .
@@ -147,7 +147,7 @@ switch($op){
 
 	case "reload_top":
 
-			$qry	=	'select TopVision from variedades_online where Variedad = ' . "'$vari'";						
+			$qry	=	'select TopVision from Variedades_online where Variedad = ' . "'$vari'";						
 			$datos = $db->getTopVision($qry);
 			if ($datos)
 			{

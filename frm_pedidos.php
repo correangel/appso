@@ -87,6 +87,7 @@ label.error {
 				</article>
 				<article class="col-md-5">
 					<input name="id_optica" type="hidden" id="id_optica" value="<?= $cliente ?>" />
+					<input name="txt_nombres" type="hidden" id="txt_nombres" value="<?= $nombre ?>" />
 					<input name="txt_nombre" type="text" class="form-control input-sm" id="txt_nombre" value="<?= $nombre ?>" disabled />
 					<!--<?=$info[id_lote];?><select name="id_optica" id="id_optica" class="textbox form-control input-sm" >
 					                        <?php $db = new Database();
@@ -564,9 +565,9 @@ label.error {
 				</table>
 			</div>	
 	
-	 		<input name="tipo_trn" type="hidden" id="tipo_trn" value="Add" />
+	 		<input name="tipo_trn" type="hidden" id="tipo_trn" value="hola" />
 			<input name="txt_idorden" type="hidden" id="txt_idorden" value="" />
-			<input name="txt_mailDestino" type="hidden" id="txt_mailDestino" value="raures01@gmail.com;safcrace@gmail.com">
+			<input name="txt_mailDestino" type="hidden" id="txt_mailDestino" value="safcrace@gmail.com">
 			<input name="txt_mailOrigen" type="hidden" id="txt_mailOrigen" value="info@solucionoptica.com">			
 			<input name="txt_asunto" type="hidden" id="txt_asunto" value="Nuevo Pedido en Linea">
 			

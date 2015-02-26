@@ -4,9 +4,13 @@
 	verifica_sesion();	
 	
 	$db = new Database();
+
+	//exit("elimina: " . $_GET["tipo_trn"]  . "     id No. " . $_GET["id"] . "    control No. " . $_GET["orden"]);
 	
 	if (isset($_GET['tipo_trn'])){
 		$accion = $_GET['tipo_trn'];
+		$id = $_GET["id"];
+		$orden = $_GET["orden"];
 	}
 	else
 	{
@@ -19,7 +23,7 @@
   	  case "Add":      
                     $campos=Array();
                     $campos[optica]=strip_tags($_POST["id_optica"]);
-                    $campos[nombre]=strip_tags($_POST["txt_nombre"]);
+                    $campos[nombre]=strip_tags($_POST["txt_nombres"]);
 					$campos[no_control]=strip_tags($_POST["txt_control"]);
 					$campos[paciente]=strip_tags($_POST["txt_paciente"]);
 					$campos[esfera_der]=strip_tags($_POST["txt_esferad"]);
@@ -45,8 +49,8 @@
 					$campos[patilla]=strip_tags($_POST["txt_patilla"]);
 					$campos[vertical]=strip_tags($_POST["txt_vertical"]);
 					$campos[diagonal]=strip_tags($_POST["txt_diagonal"]);
-					$campos[observaciones]=strip_tags($_POST["txt_observacion"]);					
-					
+					$campos[observaciones]=strip_tags($_POST["txt_observacion"]);
+
 					$db->getInsOrden($campos);
 
 					header('Location: frm_pedidos.php?m=1');
@@ -58,7 +62,7 @@
     case "Update":
                     $campos=Array();
                     $campos[optica]=strip_tags($_POST["id_optica"]);
-                    $campos[nombre]=strip_tags($_POST["txt_nombre"]);
+                    $campos[nombre]=strip_tags($_POST["txt_nombres"]);
 					$campos[no_control]=strip_tags($_POST["txt_control"]);
 					$campos[paciente]=strip_tags($_POST["txt_paciente"]);
 					$campos[esfera_der]=strip_tags($_POST["txt_esferad"]);
@@ -86,7 +90,7 @@
 					$campos[diagonal]=strip_tags($_POST["txt_diagonal"]);
 					$campos[observaciones]=strip_tags($_POST["txt_observacion"]);
 					$campos[id_orden]=strip_tags($_POST["txt_idorden"]);
-					
+							
 					$db->getUpdateOrden($campos);					
 					header('Location: frm_pedidos.php?m=2');
 					/*
@@ -96,12 +100,12 @@
     break;
 
 	case "Delete":
-					$campos[id_orden] = $_GET['id'];
-					echo 'Esta info trae:  ' . $accion . ' y ' . $_GET['id'];
+					//echo 'Esta info trae:  ' . $accion . ' y ' . $_GET['id'];
 					
         			if($confirm=="Ok"){
-    				      $db->getDeleteOrden($campos);
+    				      $db->getDeleteOrden($orden,$id);
     			    }
+    			    header("location: frm_pedidos.php?m=3");
         //redireccionar("index1.php?op=$op&ac=$ac&msg2=Ingreso eliminado!");
   break;
 }

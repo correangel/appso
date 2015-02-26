@@ -108,6 +108,7 @@ switch($op){
 					$array[26]		=	$dat['observaciones'];
 					$array[27]		=	$dat['id_orden'];
 			endforeach;
+			
 			$array[28]	=	'Update';
 			$array[29]  =   'Poly Blanco  Multifocal 72 Compac Ultra CZ';
 			echo json_encode($array);

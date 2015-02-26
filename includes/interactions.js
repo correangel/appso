@@ -121,11 +121,12 @@ $(document).ready(function () {
 	});
 	
 	$("#buttone").click(function(evento){	
-	 	orden = $("#txt_paciente").val();
+	 	orden = $("#txt_control").val();	 	
+	 	id = $("#id_optica").val();
    		respuesta = confirm("Está seguro de eliminar esta Orden?");
         if(respuesta){	
-			window.location = 'mnt_ordenes.php?confirm=Ok&tipo_trn=Delete&id='+orden;
-		}			
+			window.location = 'mnt_ordenes.php?confirm=Ok&tipo_trn=Delete&id=' + id + '&orden=' + orden;
+		}		
 	});
 	
 	$("#buttonv").click(function(evento){
@@ -845,6 +846,7 @@ $(document).ready(function () {
 	});
 	
 	$("#button_buscar").click(function(evento){
+		$("#tipo_trn").val('Update');
 		$("#consulta").css("display","block");
 		$("#message").css("display","none");
 		$("#ingreso").css("display","block");
@@ -853,7 +855,8 @@ $(document).ready(function () {
 		$("#txt_vision").attr('checked', false);		
 	});
 	
-	$("#button_add").click(function(evento){		
+	$("#button_add").click(function(evento){
+		$("#tipo_trn").val('Add');		
 		$("#ingreso").css("display","block");
 		$("#message").css("display","none");
 		$("#consulta").css("display","none");
@@ -878,7 +881,7 @@ $(document).ready(function () {
 
 	$("#buttong").click(function(evento){	
 		$("#message").css("display","block");
-		valdest  	=	$("#txt_mailDestino").val();
+		valdest  	=	$("#txt_mailDestino").val();		
 		valasun		=	$("#txt_asunto").val();
 		valcont		= 	$("#id_optica").val();
 		valdesd		=	$("#txt_mailOrigen").val();
@@ -899,7 +902,8 @@ $(document).ready(function () {
 			error:function (xhr, ajaxOptions, thrownError){
                     alert(xhr.status);
                     alert(xhr.responseText);
-		    }    		  
+		    }
+		       		  
 		});		
 
 	});	

@@ -10,9 +10,9 @@
 			$this->datos = array();
 			$this->detalle = array();
 			$host = "localhost";     
-			$username = "root"; /*"c4appso";*/
+			$username = "c4appso"; /*"c4appso";*/
 			$db = "c4appso";						
-			$password = ""; /*"swSo14";*/  
+			$password = "swSo14"; /*"swSo14";*/  
 			$dsn = 'mysql:host=localhost;dbname=c4appso;';
 			
 			/* Conexion con Hosting SW
@@ -187,7 +187,7 @@
 			$diagonal		=	$info[diagonal];
 			$observaciones	=	$info[observaciones];
 
-			$stmt->execute();			
+			$stmt->execute();
 			
 		}
 		
@@ -304,18 +304,18 @@
 			{
 				$this->datos[] = $row;				
 			}
-			
 			return $this->datos;			
 		}
 
-		public function getDeleteOrden($control=null,$optica=null)
+		public function getDeleteOrden($info)
 		{
-			$sql = "DELETE FROM ordenes WHERE optica =  $optica and no_control = $control";
-
+			$sql = "delete from ordenes where id_orden = ?";
 			$stmt = $this->pdo->prepare($sql);
-			
+			$stmt->bindParam(1,$id_orden);
+			$id_orden = $info["id_orden"];
 			$stmt->execute();
-					
+		
+			header("location: frm_pedidos.php?m=3");
 		}
 	
 		public function getCombiVariedad($sql=null)
